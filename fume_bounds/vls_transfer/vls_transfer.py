@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Dict, Tuple
+import math
 
 import torch
 from torch import nn
@@ -27,6 +28,13 @@ class VLSConfig:
     combined_weight: float = 1.0
 
     def validate(self) -> None:
+        numeric = [self.mix_beta, self.noise_beta_clean, self.noise_beta_random,
+                   self.noise_std, self.clean_weight, self.vicinal_weight,
+                   self.noise_weight, self.combined_weight]
+        if not all(math.isfinite(v) for v in numeric):
+            raise ValueError("Configuration values must be finite")
+        if not isinstance(self.negatives_per_anchor, int):
+            raise ValueError("negatives_per_anchor must be an integer")
         if min(self.mix_beta, self.noise_beta_clean, self.noise_beta_random) <= 0:
             raise ValueError("Beta distribution parameters must be > 0")
         if self.noise_std < 0 or self.negatives_per_anchor < 0:
@@ -46,6 +54,12 @@ def matching_pairs(labels: torch.Tensor, negatives_per_anchor: int = 1):
     """
     if labels.ndim != 2 or labels.shape[0] == 0:
         raise ValueError("labels must be nonempty [B,K]")
+    if not torch.isfinite(labels).all() or not ((labels == 0) | (labels == 1)).all():
+        raise ValueError("Training labels must be finite hard 0/1 multilabel vectors")
+    if (labels.sum(1) == 0).any():
+        raise ValueError("Empty label row: cannot declare aligned pairs positive; fix annotation protocol")
+    if not isinstance(negatives_per_anchor, int) or negatives_per_anchor < 0:
+        raise ValueError("negatives_per_anchor must be a nonnegative integer")
     y = (labels > 0).float()
     overlap = (y @ y.T) > 0
     n = y.shape[0]
@@ -104,6 +118,9 @@ def edl_expected_cross_entropy(logits: torch.Tensor, positive_target: torch.Tens
         raise ValueError("Evidence logits must be [N,2]")
     if not torch.isfinite(logits).all():
         raise FloatingPointError("Non-finite evidence logits")
+    if (positive_target.ndim != 1 or not torch.isfinite(positive_target).all()
+            or (positive_target < 0).any() or (positive_target > 1).any()):
+        raise ValueError("Matching targets must be finite scalars in [0,1]")
     alpha = 1.0 + F.softplus(logits)
     t = torch.stack((positive_target, 1-positive_target), dim=-1).to(alpha.dtype)
     return (t*(torch.digamma(alpha.sum(dim=-1, keepdim=True))-
@@ -152,6 +169,10 @@ class FUMEVLS(nn.Module):
         base = original_loss_fn(ret['view1_feature'], ret['view2_feature'],
                                 ret['view1_membershipDegree'], ret['view2_membershipDegree'],
                                 labels, labels, fuzzy_alpha)
+        if self.cfg.combined_weight == 0:
+            zero = base.new_zeros(())
+            return base, dict(base=base.detach(), vls=zero, pairs=zero,
+                              positives=zero, negatives=zero)
         ip, tp, relevance = matching_pairs(labels, self.cfg.negatives_per_anchor)
         xi = images[ip]
         xt = texts[tp]

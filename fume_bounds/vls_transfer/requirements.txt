@@ -1,0 +1,4 @@
+numpy>=2.0
+torch>=2.2
+pytest>=8
+# Also install the dependencies required by the user's original FUME checkout.

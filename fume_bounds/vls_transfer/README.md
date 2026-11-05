@@ -1,85 +1,142 @@
-# Complete VLS transfer for FUME (research prototype)
+# FUME + VLS: binary matching transfer and uncertainty evaluation
 
-This is a **full initial implementation**, not an ablation-only partial component. It combines the two original components of Li, Chen & Yue (NeurIPS 2025): **strong vicinal supervision** and **Gaussian noise-augmented vicinal supervision**, both trained with their expected-CE Dirichlet loss (paper Eqs. 10–15). FUME's original fuzzy credibility and contrastive loss are retained, and *both image/text encoders receive VLS gradients*. The new evidence head is black-box and predicts binary **image–text relevance**, not a mutually exclusive category from INRIA's multilabel vectors.
+## Current scope (2026-11-05, v2)
 
-## Important attribution and limits
+This is an independent, task-adapted implementation of Li, Chen & Yue,
+**Vicinal Label Supervision for Reliable Aleatoric and Epistemic Uncertainty
+Estimation**, NeurIPS 2025. It is not the authors' official code or a complete
+CIFAR reproduction. The existing binary matching task, two input-mixing branches
+and original FUME loss are retained. No per-label VLS, new risk solver, parameter
+rollback, Beta distillation, or novel uncertainty theorem is silently added.
 
-- VLS's mathematical idea and hyperparameters are **from the paper**, not a new contribution. Cross-modal pair construction and dual-tower mixing are a **task adaptation**, not guaranteed faithful to the original supervised image classification input distribution. Mixup's interpolated relevance target need not equal real pairwise match probability.
-- Official paper defaults confirmed: strong `Beta(10,10)` mixing; noise mixing `Beta(1,1)`; positive/nonmatching Dirichlet concentration `1+softplus(logits)`. Paper's full objective is `L_vicinal + L_noise`. FUME's own loss is kept as a separate original-task regularizer, `L_fume + vls_weight*(L_vicinal+L_noise)`.
-- `noise_std=1.0` is an *implementation choice to be tuned for pre-extracted features*, not asserted to be the uniquely correct paper value.
-- Every aligned sample participates in original FUME supervision and is also in the positive pair bank. Negatives are drawn from observed non-overlapping labels; no samples are filtered by confidence. With no negatives in a batch, VLS degenerates to positive-only supervision, which the logs expose.
-- Zero additional semantic probing / Beta distillation / lower-bound solver / parameter rollback has been inserted. The VLS branch can be disabled term-by-term later for ablations without changing code.
-- No real INRIA/CIFAR result is claimed. Local CPU tests check math and gradient flow. Unfiltered mAP is computed using embeddings actually updated by this training, not just an auxiliary head.
+Official paper and source availability audit: see [FORMULA_MAP.md](FORMULA_MAP.md).
 
-## Git integration
-
-Place `vls_transfer.py` and `train_fume_vls.py` in `fume_bounds/vls_transfer/` (or run from this directory) and use an existing upstream installation:
+## Train with the existing FUME checkout
 
 ```bash
+git pull --ff-only origin main
 cd fume_bounds/vls_transfer
+pip install -r requirements.txt
 python -m pytest -q
 python train_fume_vls.py \
   --fume-dir /path/to/FUME/2025-CVPR-FUME \
-  --dataset INRIA \
-  --checkpoint /path/to/prior/encoder.pt \
+  --dataset INRIA --checkpoint /path/to/encoder.pt \
   --epochs 20 --batch-size 128 --lr 5e-5 \
-  --output /path/to/new_output_run
+  --uq-pairs 20000 --uq-chunk 1024 \
+  --output /path/to/new_run
 ```
 
-If no prior `encoder.pt` is available, omit `--checkpoint` to train FUME and the complete VLS branch together from scratch. A prior encoder checkpoint must contain both `state_dict` and `fixed_W`; the original FUME maps `W` as an ordinary non-parameter tensor, so accepting a checkpoint without `W` silently changes its semantics.
+Omit `--checkpoint` to train from scratch. With `--checkpoint`, training loads
+FUME encoder weights and the ordinary Tensor `W`, initializes a NEW evidence
+head and a NEW Adam optimizer. This is an encoder warm start, NOT exact optimizer
+resume. `encoder.pt` must contain `state_dict` (or `fume_state`) and `fixed_W`.
+Do not pass an encoder-only checkpoint to the standalone uncertainty evaluator.
+The original upstream data paths and formats remain the user's responsibility.
 
-For reproducibility, new output folders are required. Per-epoch loss parts are written in `history.jsonl`, and model/head/config are saved to `vls_final.pt` and `config.json`. Test mAP is computed **only once at the end**, without threshold filtering or test-set checkpoint selection. `--no-eval` disables this final test pass.
+Every original training row participates. Test data are evaluated once after
+fixed-epoch training, not used to choose a checkpoint. Use `--no-eval` to skip
+this final evaluation. Results require a new output directory.
 
-## Controls available *after* the initial full run
+## Evaluate an already trained VLS checkpoint without retraining
 
 ```bash
-# Vicinal-only ablation
-python train_fume_vls.py ... --noise-weight 0
-
-# Noise-only ablation
-python train_fume_vls.py ... --vicinal-weight 0
-
-# Add an optional ordinary clean pair EDL loss
-python train_fume_vls.py ... --clean-weight 1
-
-# Pair sampling, amplitudes, and source loss weight
-python train_fume_vls.py ... --negatives-per-anchor 2 \
-  --mix-beta 10 --noise-beta-clean 1 --noise-beta-random 1 \
-  --noise-std 0.3 --vls-weight 0.5
+python evaluate_vls.py \
+  --fume-dir /path/to/FUME/2025-CVPR-FUME --dataset INRIA \
+  --checkpoint /path/to/run/vls_final.pt \
+  --uq-pairs 20000 --uq-seed 20261105 --uq-chunk 1024 \
+  --output /path/to/new_evaluation
 ```
 
-`--noise-weight=0 --vicinal-weight=0` requires a nonzero clean term. Setting all terms zero is rejected. Use `--vls-weight=0` if testing untouched FUME training with this entrypoint (evidence head then remains unused).
+Both v1 and v2 `vls_final.pt` files can be evaluated: the evaluator restores the
+FUME encoder, fixed W and trained evidence head, inferring the head hidden size
+from its state. v1 has no trained-head flag; do not evaluate a v1 baseline made
+with `--vls-weight 0` as a trained evidential model. v2 explicitly rejects such
+an untrained-head checkpoint. Evaluation does not modify checkpoint parameters.
 
-## Key equations
+## What is computed
 
-Given a pair `(xI_i, xT_j)` with relevance `r_ij = 1[(y_i & y_j) != 0]`, virtual samples mix **both modalities with the same** lambda:
+Retrieval always uses ALL test queries and ALL test candidates, including paired
+entries. Ranking uses cosine similarity of the trained FUME embeddings. AP is
+zero when a query has no observed relevant candidate; it is not skipped. No
+uncertainty threshold changes retrieval candidates or the mAP denominator.
 
-\[
-\tilde{x}^{v}=\lambda x^{v}_{ij}+(1-\lambda)x^{v}_{kl},\quad
-\tilde r=\lambda r_{ij}+(1-\lambda)r_{kl},\quad
-\lambda\sim\mathrm{Beta}(10,10).
-\]
+The binary evidence head is evaluated separately. By default 20,000 ordered
+pairs are uniformly drawn without replacement from the full test Cartesian pool,
+using a fixed independent NumPy seed, with no class balancing or uncertainty
+filtering. This keeps natural pair prevalence and includes cross-row positives
+when drawn. Pair IDs and their hash are saved. `--uq-pairs 0` evaluates all pairs,
+which can be expensive in memory, runtime, and exported files. Sampling for UQ
+never reduces the set used by retrieval mAP.
 
-Noise-augmented counterpart:
+Outputs:
 
-\[
-\tilde{x}^{v}=\lambda x^{v}_{ij}+(1-\lambda)\epsilon^{v},\quad
-\tilde r=\lambda r_{ij}+(1-\lambda)/2,\quad
-\lambda\sim\mathrm{Beta}(1,1).
-\]
+- `vls_final.pt`, `history.jsonl`, `config.json`, `provenance.json`: trained model,
+  configuration, consumed sample counts, source/checkpoint hashes.
+- `test_metrics.json`: full unfiltered I-to-T and T-to-I cosine mAP.
+- `pair_predictions.npz`: pair indices, hard relevance, alpha, mean probability,
+  concentration, total entropy, aleatoric entropy, epistemic MI, Dirichlet
+  differential entropy, and vacuity. Class order is **match, nonmatch**.
+- `uncertainty_report.json`: binary Brier, two-class-summed Brier (2x binary
+  Brier), predictive NLL, accuracy, probability ECE, relevance AUROC/AP, and
+  per-uncertainty error-detection AUROC/AP/FPR95 and AURC/E-AURC.
+- `risk_coverage_*.csv`: pairwise classification risk-coverage curves. These are
+  NOT filtered retrieval mAP curves. All pairs contribute to exact AURC; the CSV
+  is a maximum 1,000-point display grid.
+- `evaluation_summary.json`: combined protocol and explicit OOD status.
 
-`x^I` and `x^T` are **separate feature spaces** and are never added together. The evidence model sees their embeddings **after** the original FUME encoders.
+All entropies use natural logs (nats). AU = expected categorical entropy;
+EU_MI = total entropy - AU. Dirichlet differential entropy can be negative and
+is a separate score, NOT added to AU. Vacuity = K/S; it is not substituted for
+EU_MI. These are model-implied measures, not ground-truth AU/EU estimates.
+Exact uncertainty ties use expected random ordering within a tie group, so
+pair enumeration cannot artificially improve AURC. ECE bins positive match
+probability, not top-label confidence. Undefined detection metrics with only one
+class are JSON null. No confidence intervals assume that all pairs are iid.
 
-\[
-L_\mathrm{EDL}(\tilde r,\boldsymbol\alpha)=
-\sum_{k=0}^1\tilde y_k[\psi(\alpha_0+\alpha_1)-\psi(\alpha_k)],\quad
-\boldsymbol\alpha=1+\mathrm{softplus}(a).
-\]
+## Optional genuine OOD data
 
-Note that all pairwise labels are computed only from training labels. Unknown/missing multi-label positives may appear as negatives; this is a limitation to evaluate, not a noise-modeling contribution.
+Provide `--ood-pairs /path/to/ood_pairs.npz` to either entrypoint. This file must
+contain `image_features [N, D_I]` and `text_features [N, D_T]`, with each row an
+actual OOD pair, in the same feature/preprocessing spaces as training. The user
+must justify the OOD split; a negative pair or a noisy training pair is NOT
+silently labeled OOD. ID/OOD pair-selection protocols should be comparable.
 
-## Evaluation plan
+The code saves `ood_predictions.npz` and `ood_report.json`, with OOD positive
+for AUROC/AP/FPR95. Without an OOD file, status is `not_run_no_ood_data`; no OOD
+result is invented. An OOD AUROC does not prove correct source disentanglement.
 
-First run the whole configuration, then compare: original FUME, FUME+binary evidence with clean labels, VLS-only, noise-only, both VLS losses, optional clean term, matched capacity and training budgets. Compare full I→T/T→I mAP, match probability Brier/NLL, confidence/coverage at fixed recall, OOD and controlled known-ambiguity data. Do not use filtered mAP as the only trust metric. Real INRIA has no repeated ambiguity annotations, so its accuracy alone cannot prove correct epistemic/aleatoric attribution.
+## Preserved training recipe and ablations
 
-Original source: [Li et al., NeurIPS 2025](https://papers.nips.cc/paper_files/paper/2025/hash/97b73904e88cc1dc0a3485595eda3753-Abstract-Conference.html). Upstream: [FUME](https://github.com/siyuancncd/FUME).
+The default remains:
+
+`L_total = L_FUME + L_vicinal + L_noise`.
+
+Strong Mixup uses Beta(10,10); Gaussian-noise mixing uses Beta(1,1). The same
+lambda mixes both views within their OWN pre-extracted feature spaces, before
+the encoders. The evidence loss is the Dirichlet expected CE, alpha=1+softplus.
+`clean_weight=0` follows paper Eq.15, which has no separate clean EDL term;
+original FUME hard-label supervision is still present. Noise std=1 is a transfer
+implementation choice, not a universal feature-scale recommendation.
+
+```bash
+# Change these flags on the training command; keep data/seed/budget matched.
+--noise-weight 0                  # vicinal only
+--vicinal-weight 0                # noise only
+--clean-weight 1                  # extra clean EDL, not required by original VLS
+--vicinal-weight 0 --noise-weight 0 --clean-weight 1  # hard EDL baseline
+--vls-weight 0                    # original FUME path; skip random head's UQ
+```
+
+All term weights, mixing distributions, negative count and noise scale remain
+configurable. Training negatives have no observed label overlap; missing labels
+can create false negatives. Empty or non-binary training labels now raise an
+error instead of silently declaring an invalid aligned pair positive.
+
+## What has and has not been validated
+
+See [TEST_REPORT.md](TEST_REPORT.md). Tests cover analytical values, sampling
+checks, two-encoder gradients, tie handling, save/reload, the command-line
+training-to-evaluation path, and a synthetic OOD-interface test. They are NOT
+real INRIA results, GPU validation, or evidence that estimated AU/EU correspond
+to their true sources. No default mixing, noise or loss setting is claimed to
+improve real retrieval before that experiment is run.

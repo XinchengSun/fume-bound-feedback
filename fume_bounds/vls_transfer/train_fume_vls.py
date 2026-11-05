@@ -11,6 +11,7 @@ import argparse
 from dataclasses import asdict
 import importlib
 import json
+import hashlib
 import os
 from pathlib import Path
 import random
@@ -134,13 +135,21 @@ def parser():
     p.add_argument('--eval-chunk', type=int, default=128)
     p.add_argument('--threads', type=int, default=2)
     p.add_argument('--no-eval', action='store_true')
+    p.add_argument('--uq-pairs', type=int, default=20000,
+                   help='Uniform held-out Cartesian pairs for UQ; 0=all; retrieval always uses all')
+    p.add_argument('--uq-seed', type=int, default=20261105)
+    p.add_argument('--uq-chunk', type=int, default=1024)
+    p.add_argument('--ood-pairs', type=Path, default=None,
+                   help='Optional genuine OOD paired features NPZ; no synthetic OOD by default')
     return p
 
 
 def main(argv=None):
     args = parser().parse_args(argv)
-    if args.epochs < 1 or args.batch_size < 2 or args.lr <= 0:
+    if args.epochs < 1 or args.batch_size < 2 or args.lr <= 0 or not np.isfinite(args.lr):
         raise ValueError('epochs >=1, batch-size>=2 and positive lr are required')
+    if args.uq_pairs < 0 or min(args.uq_chunk,args.eval_chunk,args.threads) < 1:
+        raise ValueError('Positive chunks/threads and nonnegative uq-pairs required')
     if args.output.exists() and any(args.output.iterdir()):
         raise FileExistsError(f'Output directory must be new/empty: {args.output}')
     args.output.mkdir(parents=True, exist_ok=True)
@@ -165,7 +174,20 @@ def main(argv=None):
     train_loader = DataLoader(loaders['train'].dataset, batch_size=args.batch_size,
                               shuffle=True, drop_last=False, num_workers=0)
     opt = torch.optim.Adam(model.parameters(), lr=args.lr, betas=(0.5, 0.999))
+    # A supplied checkpoint is an encoder warm start, not optimizer resume.
+    # The binary evidence head is trained afresh; evaluate_vls.py restores it for evaluation.
     history = args.output / 'history.jsonl'
+    provenance = dict(
+        format='fume_vls_transfer_v2', dataset=args.dataset,
+        upstream={n:hashlib.sha256((args.fume_dir/n).read_bytes()).hexdigest()
+                  for n in ('model.py','options.py','processor.py')},
+        warmstart_checkpoint_sha256=(hashlib.sha256(args.checkpoint.read_bytes()).hexdigest()
+                                    if args.checkpoint else None),
+        seed=args.seed, vls_config=asdict(vls_conf),
+        torch_version=str(torch.__version__), numpy_version=np.__version__,
+        no_confidence_filter=True, checkpoint_policy='fixed_last_epoch',
+        optimizer_resume=False, evidence_head_initialization='new')
+    (args.output/'provenance.json').write_text(json.dumps(provenance,indent=2),encoding='utf8')
     with history.open('w', encoding='utf-8') as writer:
         for epoch in range(args.epochs):
             model.train()
@@ -190,20 +212,34 @@ def main(argv=None):
                       **{k:v/count for k,v in aggregate.items()}}
             writer.write(json.dumps(record)+'\n'); writer.flush()
             print(json.dumps(record), flush=True)
-    saved = dict(format='fume_vls_transfer_v1',fume_state={k:v.cpu() for k,v in model.fume.state_dict().items()},
+    saved = dict(format='fume_vls_transfer_v2',fume_state={k:v.cpu() for k,v in model.fume.state_dict().items()},
                  fixed_W=model.fume.W.detach().cpu(),
                  evidence_head={k:v.cpu() for k,v in model.head.state_dict().items()},
                  vls_config=asdict(vls_conf),dataset=args.dataset,
                  classes=upstream_config['class_number'], seed=args.seed,
+                 head_hidden=args.head_hidden,
+                 evidence_head_trained=args.vls_weight > 0,
+                 training_epochs=args.epochs,
                  full_data_no_uncertainty_filter=True)
     torch.save(saved, args.output / 'vls_final.pt')
     metrics = None
     if not args.no_eval:
-        metrics = evaluate_full(model, loaders['test'], args.device, args.eval_chunk)
-        (args.output / 'test_metrics.json').write_text(json.dumps(metrics, indent=2), encoding='utf8')
+        if args.vls_weight > 0:
+            from evaluate_vls import evaluate_model
+            report = evaluate_model(model,loaders['test'],args.device,args.output,
+                                    pair_budget=args.uq_pairs,seed=args.uq_seed,
+                                    chunk=args.uq_chunk,retrieval_chunk=args.eval_chunk,
+                                    ood_pairs=args.ood_pairs)
+            metrics = report['retrieval']
+        else:
+            metrics = evaluate_full(model,loaders['test'],args.device,args.eval_chunk)
+            (args.output/'test_metrics.json').write_text(json.dumps(metrics,indent=2),encoding='utf8')
+            (args.output/'evaluation_summary.json').write_text(json.dumps(dict(
+                retrieval=metrics,uq_status='not_run_evidence_head_not_trained'),indent=2),encoding='utf8')
     cfg = {**vars(args), 'fume_dir':str(args.fume_dir),
            'checkpoint':str(args.checkpoint) if args.checkpoint else None,
-           'output':str(args.output), 'vls_config':asdict(vls_conf),
+           'output':str(args.output), 'ood_pairs':str(args.ood_pairs) if args.ood_pairs else None,
+           'vls_config':asdict(vls_conf),
            'dataset_config':{k: (v if isinstance(v,(str,int,float,bool)) else str(v))
                              for k,v in upstream_config.items()},
            'tested_once_after_training':not args.no_eval}

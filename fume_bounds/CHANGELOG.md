@@ -1,5 +1,16 @@
 # 变更记录
 
+## 2026-11-05 — VLS v2：补齐可信性评测与独立重载
+
+- 保留匹配级 VLS 两项监督、原 FUME 损失和默认权重；没有新增逐标签分支、风险求界或回滚机制。
+- 新增 `uncertainty.py`：TU、AU、互信息 EU、Dirichlet 微分熵、vacuity，统一使用 nats；支持严格输入和数值检查。
+- 新增 `evaluate_vls.py`：训练后或已训练 checkpoint 独立评测；恢复 encoder、普通 Tensor W 和证据头，不用随机头冒充已训练模型。
+- 保留全查询全候选余弦 mAP；新增固定种子的自然分布配对抽样，用于 Brier/NLL/ECE、错误检测和风险—覆盖评测。保存配对索引、预测和协议哈希。可信性配对抽样不影响 mAP 分母。
+- OOD 仅使用用户明确提供的外部分布配对；未提供时记录 not_run，不把负配对或高斯噪声称为真实 OOD。
+- 修正并列不确定性分数的 AURC 顺序偏差；退化单类 AUROC 返回 null；补齐配置、标签及未训练证据头保护。
+- 新增公式映射、官方源码可用性核查及理论边界说明：官方页面有 Supplemental ZIP，但本次下载失败，未核验其代码内容；未发现可核验作者 GitHub，不等于断言未开源。
+- 当前 VLS 子目录 CPU 测试 43 passed（14 旧例＋29 新例）；含训练—保存—独立重载—评测联动。未运行真实 INRIA/GPU，未声称性能提升。
+
 ## 2026-11-05 — VLS 完整跨模态迁移初版（未调参）
 
 - 新增 `fume_bounds/vls_transfer/`：NeurIPS 2025 VLS 的 strong mixup（Beta(10,10)）、Gaussian noise vicinal（Beta(1,1)）和二类 Dirichlet 期望交叉熵。
