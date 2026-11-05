@@ -46,3 +46,8 @@ python install_reference.py --target /path/to/current_encoder_trainer
 ## 实验边界
 
 2026-11-04 仓库整理时在 CPU 实际运行合并测试：**56 passed**。不代表 GPU 或真实 INRIA 验证；尚未证明 mAP 提升、统计覆盖或认知/偶然不确定性正确分离。数据、大权重、私人路径和服务器实验输出不随源码上传。
+
+
+## VLS 跨模态迁移（2026-11-05）
+
+完整 VLS 初版见 [`vls_transfer/`](vls_transfer/)，包含强混合、噪声混合、二元 EDL、FUME 原损失及训练入口。请先阅读其 `README.md` 和 `TEST_REPORT.md`；已有 v3/v4 下界反馈代码保持不变。
