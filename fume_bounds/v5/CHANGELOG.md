@@ -1,5 +1,16 @@
 # v5 改动记录
 
+## 2026-11-06 — 验证集调参入口与可选证据约束
+
+- 新增run_experiment.py，默认只在val上评价/选模型，测试必须显式运行；保存best_map、best_nll和完整续训状态。
+- 新增错误证据KL与线性退火，只用原始硬multi-hot；解析简式与分布KL核对；+1不变。
+- 增加shared/per_label预算切换；原共享为默认，逐类不复制编码器。
+- 增加可选原始图文标签意见一致性，默认0；不复现TCL双模型多步训练。
+- 新增control/v5/coarse三组同预算配置、参数表、随机网格命令生成与val汇总。
+- 默认保留ReLU/Sigmoid/Softplus、原FUME对比、Adam设置；没有修改原train.py和既有核心模块。
+- 新增26项测试全部通过（分组执行）；完整122396674参数模型在CPU合成batch2进行全项Adam检查。
+- 未运行真实INRIA/GPU或实际调参。详见TUNING.md与EXPERIMENT_TEST_REPORT.md。
+
 ## 2026-11-06 — 首次代码交付
 
 - 新建独立v5目录，保留所有旧版文件与历史记录。

@@ -1,0 +1,43 @@
+{
+  "test": "full-size shared v5 with KL+optional consistency; synthetic batch2",
+  "torch": "2.10.0+cpu",
+  "device": "cpu",
+  "parameters": 122396674,
+  "logs": {
+    "kl_coefficient": 0.01,
+    "classification": 0.6931697130203247,
+    "weighted_classification": 0.6931697130203247,
+    "contrastive": 2.8285536766052246,
+    "weighted_contrastive": 0.141427680850029,
+    "error_kl": 0.19315464901843798,
+    "weighted_error_kl": 0.00193154649018438,
+    "consistency": 0.002250440651550889,
+    "weighted_consistency": 2.250440593343228e-05,
+    "evidence_image": 2.0,
+    "max_evidence_image": 2.0,
+    "h_norm_image": 0.1704561412334442,
+    "evidence_text": 2.0,
+    "max_evidence_text": 2.0,
+    "h_norm_text": 0.13784410059452057,
+    "vicinal": 0.8333647416280869,
+    "weighted_vicinal": 0.8333647416280869,
+    "noise": 0.8333699869772804,
+    "weighted_noise": 0.8333699869772804,
+    "total": 2.503286188273
+  },
+  "gradient_norms": {
+    "img_net.layers.4.weight": 0.5284733772277832,
+    "text_net.layers.4.weight": 0.6568394899368286,
+    "img_evidence.bias": 0.03294553607702255,
+    "text_evidence.bias": 0.0327761173248291
+  },
+  "max_parameter_changes": {
+    "img_net.layers.4.weight": 4.999994416721165e-05,
+    "text_net.layers.4.weight": 4.999994416721165e-05,
+    "img_evidence.bias": 4.9948692321777344e-05,
+    "text_evidence.bias": 4.9948692321777344e-05
+  },
+  "fixed_W_unchanged": true,
+  "seconds": 3.5238145419999682,
+  "not_a_real_dataset_or_performance_experiment": true
+}
