@@ -1,0 +1,41 @@
+{
+  "scope": "one CPU Adam step, synthetic paired features, NOT real INRIA",
+  "dimensions": {
+    "image": 4096,
+    "text": 1000,
+    "hidden": 4096,
+    "classes": 100,
+    "layers": 4,
+    "batch": 2
+  },
+  "parameters": 122396674,
+  "loss": {
+    "classification": 0.6930702924728394,
+    "contrastive": 2.8285536766052246,
+    "evidence_image": 2.0,
+    "evidence_text": 2.0,
+    "h_norm_image": 0.1704561412334442,
+    "h_norm_text": 0.13784410059452057,
+    "clean_total": 0.8344979882240295,
+    "vicinal": 0.8332366408066063,
+    "noise": 0.8332833229677508,
+    "total": 2.501017951998387
+  },
+  "gradients_finite": true,
+  "watched_gradient_norms": {
+    "img_net.layers.4.weight": 0.5280548930168152,
+    "text_net.layers.4.weight": 0.6590314507484436,
+    "img_evidence.bias": 0.0335385799407959,
+    "text_evidence.bias": 0.03332493454217911
+  },
+  "max_parameter_changes": {
+    "img_net.layers.4.weight": 4.999994416721165e-05,
+    "text_net.layers.4.weight": 4.999994416721165e-05,
+    "img_evidence.bias": 4.9948692321777344e-05,
+    "text_evidence.bias": 4.9948692321777344e-05
+  },
+  "observed_step_seconds": 1.761080332000006,
+  "max_rss_kib": 2367736,
+  "torch_version": "2.10.0+cpu",
+  "cuda_available": false
+}
