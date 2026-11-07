@@ -1,5 +1,15 @@
 # v5 改动记录
 
+## 2026-11-07 — 类别证据/匹配证据互斥对照
+
+- 新增 evidence_ab.py、ab_metrics.py、run_evidence_ab.py；旧model/loss/experiment/train/evaluate入口保持不变。
+- matching恢复标签交集关系监督，删除该方案的类别证据层但保留普通multi-hot分类与原对比损失；category仍可原样委托旧目标。
+- Mixup、噪声输入和证据+1全部保留；新增语义交集正例采样、无交集负例采样及分块梯度。
+- 对照脚本明确使用共同direction-BCE；posterior类别目标保留为原样参照，不隐瞒监督口径变化。
+- 独立数据顺序生成器、任务绑定checkpoint、val选模、全量余弦mAP；类别UQ和配对UQ分开报告。
+- 25项新测试通过；完整122440194参数匹配结构完成CPU合成一步更新。没有真实数据/GPU/提升结论。
+- 公式、计算量、运行及取舍见EVIDENCE_AB.md；验证细节见EVIDENCE_AB_TEST_REPORT.md。
+
 ## 2026-11-06 — 验证集调参入口与可选证据约束
 
 - 新增run_experiment.py，默认只在val上评价/选模型，测试必须显式运行；保存best_map、best_nll和完整续训状态。

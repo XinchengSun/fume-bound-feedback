@@ -1,0 +1,43 @@
+{
+  "torch": "2.10.0+cpu",
+  "device": "cpu",
+  "data": "synthetic batch2, not INRIA",
+  "parameters": 122440194,
+  "loss": 2.560885170164307,
+  "logs": {
+    "kl_coefficient": 0.0011111111111111111,
+    "pair_pairs": 4.0,
+    "pair_positives": 2.0,
+    "pair_negatives": 2.0,
+    "pair_nonaligned_positives": 0.0,
+    "pair_anchors_without_negative": 0.0,
+    "classification": 0.6933995485305786,
+    "weighted_classification": 0.6933995485305786,
+    "contrastive": 2.8285536766052246,
+    "weighted_contrastive": 0.14142768383026125,
+    "error_kl": 0.11355080061214537,
+    "weighted_error_kl": 0.00012616755623571707,
+    "h_norm_image": 0.1704561412334442,
+    "h_norm_text": 0.13784410059452057,
+    "clean_total": 0.8349534118380045,
+    "weighted_clean_total": 0.8349534118380045,
+    "vicinal": 0.8648077571796144,
+    "weighted_vicinal": 0.8648077571796144,
+    "noise": 0.8611240011466881,
+    "weighted_noise": 0.8611240011466881,
+    "total": 2.560885170164307
+  },
+  "gradient_norm": {
+    "img_net.layers.4.weight": 0.5615471005439758,
+    "text_net.layers.4.weight": 0.6807247400283813,
+    "pair_head.net.2.weight": 0.04761834070086479
+  },
+  "max_parameter_change": {
+    "img_net.layers.4.weight": 4.999994416721165e-05,
+    "text_net.layers.4.weight": 4.999994416721165e-05,
+    "pair_head.net.2.weight": 5.000084638595581e-05
+  },
+  "seconds": 2.872017612000036,
+  "has_category_evidence": false,
+  "claim": "Implementation smoke only; no retrieval/UQ improvement claim"
+}
