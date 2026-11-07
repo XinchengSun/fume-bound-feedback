@@ -202,9 +202,11 @@ def mixup(image, text, y, cfg):
     return lam*image+(1-lam)*image[p], lam*text+(1-lam)*text[p], lam*y+(1-lam)*y[p]
 
 
-def objective(model, batch, cfg=AuxConfig(), scales=(1.,1.), *, epoch=1, backward=False, probe=False):
+def objective(model, batch, cfg=AuxConfig(), scales=(1.,1.), *, epoch=1, backward=False, probe=False, cl_weight=0.05):
     """Accumulate all branches; caller performs exactly one optimizer step per original batch."""
     cfg.validate()
+    if not math.isfinite(float(cl_weight)) or cl_weight < 0:
+        raise ValueError('Contrastive weight must be finite and nonnegative')
     if len(scales)!=2 or any(not math.isfinite(float(s)) or s<0 for s in scales):
         raise ValueError('Two finite nonnegative training noise scales required')
     if model.task!='matching' and cfg.pair_clean_weight:
@@ -233,11 +235,16 @@ def objective(model, batch, cfg=AuxConfig(), scales=(1.,1.), *, epoch=1, backwar
             terms.append(part)
 
     with model.capture() as views:
-        clean,sup,cl = base.minimal_objective(model,xi,xt,y)
+        _original_e_total,sup,cl = base.minimal_objective(model,xi,xt,y)
+    # Preserve E's exact membership term. Only the explicitly configured
+    # contrastive coefficient may differ from the historical E coefficient .05.
+    clean = sup + cl_weight*cl
+    del _original_e_total
     logs.update(supervision=float(sup.detach()),contrastive=float(cl.detach()),
-                weighted_contrastive=.05*float(cl.detach()),kl_coefficient=cfg.kl_weight(epoch))
+                weighted_contrastive=cl_weight*float(cl.detach()),
+                contrastive_weight=float(cl_weight),kl_coefficient=cfg.kl_weight(epoch))
     observe('supervision',sup)
-    observe('contrastive',cl,.05)
+    observe('contrastive',cl,cl_weight)
     for name,row in views.items():
         logs['h_norm_'+name] = float(row['h'].detach().norm(dim=1).mean())
     active = model.task!='none' and (cfg.vicinal or cfg.noise or cfg.error_kl or cfg.pair_clean_weight)

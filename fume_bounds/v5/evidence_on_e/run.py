@@ -17,7 +17,7 @@ from metrics import evidence_report
 
 FORMAT='fume_evidence_on_e_v1'
 DEFAULTS=dict(task='matching',classes=100,label_base=None,layers=4,seed=2,
-              batch_size=300,lr=5e-5,initial_evidence=2.,pair_hidden=128,
+              batch_size=300,lr=5e-5,cl_weight=.05,initial_evidence=2.,pair_hidden=128,
               vicinal=1.,noise=1.,error_kl=.01,kl_anneal_epochs=10,
               mix_beta=10.,noise_beta=1.,noise_multiplier=1.,
               pair_negatives=1,pair_positive_mode='overlap',pair_chunk=128,
@@ -104,7 +104,7 @@ def main(argv=None):
                 cfg[k]=0.
     if min(cfg['classes'],cfg['batch_size'])<2 or cfg['layers']<1 or not 0<=cfg['seed']<2**32:
         raise ValueError('Invalid dimensions/seed')
-    if not math.isfinite(cfg['lr']) or cfg['lr']<=0 or cfg['uq_pairs']<1:
+    if not math.isfinite(cfg['lr']) or cfg['lr']<=0 or cfg['uq_pairs']<1 or not math.isfinite(cfg['cl_weight']) or cfg['cl_weight']<0:
         raise ValueError('Invalid lr/UQ count')
     aux=AuxConfig(**{k:cfg[k] for k in AUX})
     aux.validate()
@@ -154,7 +154,10 @@ def main(argv=None):
     write(args.output/'provenance.json',dict(format=FORMAT,config=cfg,model_config=model.config,
           data=receipt,source_sha256=sources,initial_backbone_and_W_sha256=initial,
           parameters=sum(p.numel() for p in model.parameters()),torch=str(torch.__version__),
-          numpy=str(np.__version__),device=args.device,fixed_E_clean_objective=True,
+          numpy=str(np.__version__),device=args.device,
+          fixed_E_membership_supervision=True,
+          fixed_E_clean_objective=bool(cfg['cl_weight']==.05),
+          contrastive_weight=cfg['cl_weight'],
           bce=False,necessity=False,confidence_filter=False,unit_prior=True,
           test_used_for_selection=False,weight_decay=0,adam_betas=[.5,.999],
           resume=str(args.resume) if args.resume else None,final_test_requested=args.final_test))
@@ -183,7 +186,8 @@ def main(argv=None):
                 batch=tuple(x.to(args.device) for x in batch)
                 optimizer.zero_grad(set_to_none=True)
                 _,logs,probe=objective(model,batch,aux,receipt['train_noise_rms'],
-                                       epoch=epoch,backward=True,probe=step==0)
+                                       epoch=epoch,backward=True,probe=step==0,
+                                       cl_weight=cfg['cl_weight'])
                 if any(p.grad is not None and not torch.isfinite(p.grad).all() for p in model.parameters()):
                     raise FloatingPointError('Nonfinite gradient; optimizer step NOT applied')
                 if step==0:
