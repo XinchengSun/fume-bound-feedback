@@ -1,0 +1,17 @@
+{
+  "training_commit": "2a8980a3ab85d35da68660db79813387016047c1",
+  "server_files_rehashed": 23,
+  "final_raw_tar_sha256": "d839bc223599c734c6497db3b52b249d8c9b863dcae7993eb58810b351a6c69b",
+  "eight_tracked_source_files_for_each_v5_arm_match_commit": true,
+  "three_legacy_source_hashes_match_training_receipt": true,
+  "original_driver_sha256": "c53008bcdb3e1408489b2d37430fd4298d4b3d51b94a8bbc4951788e5b4b2324",
+  "recovery_driver_sha256": "a020a6845b1f86e69accd8f0f09be2a2e23f7f8227991606b0122200a66d6852",
+  "server_driver_bytes_match_execution_host_copies": true,
+  "tracked_diff_at_archive_bytes": 0,
+  "training_time_full_diff": "not recorded",
+  "driver_sha256_at_process_start": "not recorded",
+  "per_epoch_lr": "not recorded",
+  "A_per_epoch_component_losses": "not recorded",
+  "raw_epochs_per_arm": 150,
+  "npz_hashes_verified_after_transfer": true
+}

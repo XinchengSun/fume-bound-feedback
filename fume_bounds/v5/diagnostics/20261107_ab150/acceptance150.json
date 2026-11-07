@@ -1,0 +1,70 @@
+{
+  "worker": "job-ecb844ba-8556-40b0-b386-257ad322d9ed-worker-0",
+  "GPU": "GPU-fa8cd361-887f-8284-92e2-737dc0ac6d35",
+  "torch": "2.8.0+cu128",
+  "initial_backbone_and_W_sha256": "d1c71dfa26f5f5dd9e800e40208d6a1fdda969d80388c981fa4479bc7f3a7622",
+  "first_batch_sha256": {
+    "A_fume": "6b1334ee37b11f66ab35ef2c475011c9349deaae29d2ab2e48431fa2721798b4",
+    "B_bce": "6b1334ee37b11f66ab35ef2c475011c9349deaae29d2ab2e48431fa2721798b4",
+    "C_category": "6b1334ee37b11f66ab35ef2c475011c9349deaae29d2ab2e48431fa2721798b4",
+    "D_matching": "6b1334ee37b11f66ab35ef2c475011c9349deaae29d2ab2e48431fa2721798b4"
+  },
+  "same_retrieval_on_64_train_examples": {
+    "i2t_map_all": 1.0,
+    "t2i_map_all": 1.0,
+    "mean_map": 1.0,
+    "queries": 64,
+    "candidates": 64,
+    "zero_relevance_i2t": 0,
+    "zero_relevance_t2i": 0,
+    "paired_items_included": true,
+    "confidence_filter": false
+  },
+  "official_loss_on_64": 10.31962776184082,
+  "legacy_source": {
+    "processor.py": "8761787020f455caba7a21bd47db2352c04b046a5da937b9f39e2b39ea202176",
+    "model.py": "06fb98d0d19a4f217b95ce0bbb38d787c37d8d1bab424898dcf983eaa2b3a9a2",
+    "evaluate.py": "6d8f43172b45891e98d38cb7e843dac626c86d5b09ee5ca4cdeca582386dbfd3"
+  },
+  "data": {
+    "train": {
+      "rows": 9000,
+      "image_sha256": "faed6f7959710096b06ddcaa3078592fccb39ca4c396ac57d170bae2fa5c855b",
+      "text_sha256": "0a2e5009124a487dd6f1a77c49e4c2c27fa41227675ad0235dbd6344b4ba1363",
+      "labels_sha256": "cd266c35ba72e8ff00620c7766c4469e72491d79df2dc12a20c999f533ab8a51",
+      "min_labels": 1,
+      "max_labels": 1
+    },
+    "val": {
+      "rows": 1332,
+      "image_sha256": "f4a6d7b94561cbeb98129a5f15b00fd461d17bf6195da93ed83cb547dab603c6",
+      "text_sha256": "ff0edb238d1c6b5292f917fcbe77577e17dabe7c75900da2472271578400cb83",
+      "labels_sha256": "d54e89e8890471fe953515010e3fa20242567a9de7e0d638a393c519eb7e0b1f",
+      "min_labels": 1,
+      "max_labels": 1
+    },
+    "test": {
+      "rows": 4366,
+      "image_sha256": "111c2086cb2009e8f927e09e30ce8fd9ca5b2702eddc5cfeb62a133eb6571f0e",
+      "text_sha256": "c7749d5c619f9158907a9b4052b1dadd77b75f6aa8224af0d69f875ed89188d2",
+      "labels_sha256": "c34c2c8596f7200d5b9459cc5c4020a5a73d84491916922954dcc5cc62d1d641",
+      "min_labels": 1,
+      "max_labels": 1
+    },
+    "path": "/inspire/ssd/project/video-generation/public/sunxincheng/FUME/local_ops/inria_bound_20261101/frozen_fume/datasets/INRIA-Websearch.mat",
+    "file_sha256": "aae9ec202e06080b3b3c7c5ecab01ae1aa69483eb7ec93e2b47d65590cf50dbf",
+    "image_dim": 4096,
+    "text_dim": 1000,
+    "classes": 100,
+    "label_encoding": "index_base_0",
+    "train_noise_rms": [
+      0.015624999999495823,
+      0.03162277660350819
+    ],
+    "resplit": false,
+    "feature_normalization": false
+  },
+  "seed": 2,
+  "epochs": 150,
+  "steps_per_epoch": 30
+}

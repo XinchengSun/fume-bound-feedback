@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/inspire/ssd/project/video-generation/public/sunxincheng/FUME/local_ops/v5_20261106/validation/compare150.py", line 218, in main
+    report=run_v5(arm,folder,initial)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/ssd/project/video-generation/public/sunxincheng/FUME/local_ops/v5_20261106/validation/compare150.py", line 190, in run_v5
+    runner.main(args)
+  File "/inspire/ssd/project/video-generation/public/sunxincheng/FUME/local_ops/v5_20261106/repo/fume_bounds/v5/run_evidence_ab.py", line 204, in main
+    save_json(args.output/'initial_validation.json',report_summary(assess('val',epoch=max(1,start))))
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/ssd/project/video-generation/public/sunxincheng/FUME/local_ops/v5_20261106/repo/fume_bounds/v5/run_evidence_ab.py", line 168, in assess
+    return evaluate_ab(model,datasets[split],output,batch_size=args.eval_batch_size,chunk=args.eval_chunk,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/ssd/project/video-generation/public/sunxincheng/runtime/cpu_migration_20261102/shared_site312/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/ssd/project/video-generation/public/sunxincheng/FUME/local_ops/v5_20261106/repo/fume_bounds/v5/ab_metrics.py", line 95, in evaluate_ab
+    report['common_classification'][name] = multilabel_probability_report(y.numpy(), values['class_probability'].numpy())
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/ssd/project/video-generation/public/sunxincheng/FUME/local_ops/v5_20261106/repo/fume_bounds/v5/ab_metrics.py", line 26, in multilabel_probability_report
+    per_class = [detection(y[:, k], p[:, k]) for k in range(y.shape[1])]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/ssd/project/video-generation/public/sunxincheng/FUME/local_ops/v5_20261106/repo/fume_bounds/v5/metrics.py", line 57, in detection
+    return dict(auroc=float(np.trapezoid(tpr, fpr)),
+                            ^^^^^^^^^^^^
+  File "/inspire/ssd/project/video-generation/public/sunxincheng/runtime/cpu_migration_20261102/shared_site312/numpy/__init__.py", line 333, in __getattr__
+    raise AttributeError("module {!r} has no attribute "
+AttributeError: module 'numpy' has no attribute 'trapezoid'

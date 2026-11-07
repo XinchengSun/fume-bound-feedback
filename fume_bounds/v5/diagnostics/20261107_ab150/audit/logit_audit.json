@@ -1,0 +1,35 @@
+{
+  "A_fume": {
+    "img": {
+      "energy_negative_coordinates": 0.024790956501914128,
+      "energy_true_label_coordinate": 0.6015480868259798
+    },
+    "txt": {
+      "energy_negative_coordinates": 0.04068394657755441,
+      "energy_true_label_coordinate": 0.7537379351667433
+    },
+    "W_orthogonality_max_error": 5.960464477539062e-07
+  },
+  "B_bce": {
+    "img": {
+      "energy_negative_coordinates": 0.9999935716873297,
+      "energy_true_label_coordinate": 0.000825581176515723
+    },
+    "txt": {
+      "energy_negative_coordinates": 0.9999917268123617,
+      "energy_true_label_coordinate": 0.00045430786071224105
+    },
+    "W_orthogonality_max_error": 5.960464477539062e-07
+  },
+  "C_category": {
+    "img": {
+      "energy_negative_coordinates": 0.9999903091672394,
+      "energy_true_label_coordinate": 0.0009779448265726325
+    },
+    "txt": {
+      "energy_negative_coordinates": 0.9779520019942135,
+      "energy_true_label_coordinate": 0.00179211801874418
+    },
+    "W_orthogonality_max_error": 5.960464477539062e-07
+  }
+}

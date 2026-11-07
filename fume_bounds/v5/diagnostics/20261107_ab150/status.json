@@ -1,0 +1,10 @@
+{
+  "active": null,
+  "completed": [
+    "A_fume",
+    "B_bce",
+    "C_category",
+    "D_matching"
+  ],
+  "epochs": 150
+}

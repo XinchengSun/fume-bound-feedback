@@ -1,0 +1,17 @@
+{
+  "device": "cuda",
+  "python": "3.12.12 (main, Oct 31 2025, 23:02:31) [Clang 21.1.4 ]",
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "numpy": "2.2.6",
+    "scipy": "1.17.1",
+    "h5py": "3.16.0",
+    "pytest": "8.4.2"
+  },
+  "numpy_path": "/inspire/ssd/project/video-generation/public/sunxincheng/FUME/local_ops/v5_20261106/validation/numpy226_site/numpy/__init__.py",
+  "upstream_eval_smoke": [
+    "B_bce",
+    "C_category",
+    "D_matching"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "independent_test_map_0_to_1": {
+    "B_bce": {
+      "i2t": 0.05922324879176552,
+      "t2i": 0.032456501551584555,
+      "mean": 0.04583987517167504
+    },
+    "C_category": {
+      "i2t": 0.04021997152668882,
+      "t2i": 0.04630229196372216,
+      "mean": 0.04326113174520549
+    },
+    "D_matching": {
+      "i2t": 0.05496160237715739,
+      "t2i": 0.04187321349720673,
+      "mean": 0.04841740793718206
+    }
+  },
+  "D_minus_comparator_percentage_points": {
+    "A_fume": {
+      "i2t_map_all": -50.47851800918579,
+      "t2i_map_all": -53.64237353205681,
+      "mean_map": -52.0604457706213
+    },
+    "B_bce": {
+      "i2t_map_all": -0.42591914534568787,
+      "t2i_map_all": 0.9415581822395325,
+      "mean_map": 0.2578195184469223
+    },
+    "C_category": {
+      "i2t_map_all": 1.4740929007530212,
+      "t2i_map_all": -0.4428766667842865,
+      "mean_map": 0.5156081169843674
+    }
+  },
+  "raw_epoch_rows": 600,
+  "identical_sample_order": true,
+  "initial_backbone_sha256": "d1c71dfa26f5f5dd9e800e40208d6a1fdda969d80388c981fa4479bc7f3a7622",
+  "validation_queries": 1332,
+  "test_queries": 4366
+}

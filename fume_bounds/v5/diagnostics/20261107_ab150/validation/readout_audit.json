@@ -1,0 +1,212 @@
+{
+  "A_fume": {
+    "cosine_quantiles_p05_p25_p50_p75_p95": {
+      "same_excluding_original_pair": [
+        -0.04011503798870679,
+        0.07751454808365099,
+        0.6631810328898796,
+        0.9753847562945661,
+        0.9985094633858299
+      ],
+      "different_class": [
+        -0.06067108723747361,
+        -0.020850276799189937,
+        -0.007507996393320782,
+        0.0017986016588600329,
+        0.06893065580191049
+      ]
+    },
+    "n_same_nonpaired": 16890,
+    "n_different": 1756002,
+    "same_vs_different_pooled_AUROC": 0.88056922982731,
+    "embedding_map": {
+      "image_to_text": 0.5682526400320057,
+      "text_to_image": 0.5797954069592783,
+      "mean": 0.574024023495642
+    },
+    "classification": {
+      "image": {
+        "score": "membershipDegree",
+        "present_classes": 100,
+        "macro_AP": 0.6997036184452088,
+        "top1_with_argmax": 0.6493993993993994,
+        "mean_true_class_midrank": 7.7256006006006,
+        "median_true_class_midrank": 1.0
+      },
+      "text": {
+        "score": "membershipDegree",
+        "present_classes": 100,
+        "macro_AP": 0.8122230313091248,
+        "top1_with_argmax": 0.7815315315315315,
+        "mean_true_class_midrank": 6.665165165165165,
+        "median_true_class_midrank": 1.0
+      }
+    },
+    "max_abs_cosine_change_h_to_hW": 3.2912565162135365e-07
+  },
+  "B_bce": {
+    "cosine_quantiles_p05_p25_p50_p75_p95": {
+      "same_excluding_original_pair": [
+        0.29889126671858823,
+        0.9548291578831234,
+        0.9977438764845139,
+        0.9985749751131008,
+        0.9991174333525815
+      ],
+      "different_class": [
+        0.07593433309885043,
+        0.10646219398477724,
+        0.7594567556159089,
+        0.9973368070008666,
+        0.9988325331246892
+      ]
+    },
+    "n_same_nonpaired": 16890,
+    "n_different": 1756002,
+    "same_vs_different_pooled_AUROC": 0.7369304440257812,
+    "embedding_map": {
+      "image_to_text": 0.07194984317942336,
+      "text_to_image": 0.04284006181619399,
+      "mean": 0.05739495249780868
+    },
+    "classification": {
+      "image": {
+        "score": "sigmoid(logits)",
+        "present_classes": 100,
+        "macro_AP": 0.3740477831487483,
+        "top1_with_argmax": 0.3611111111111111,
+        "mean_true_class_midrank": 12.220345345345345,
+        "median_true_class_midrank": 3.0
+      },
+      "text": {
+        "score": "sigmoid(logits)",
+        "present_classes": 100,
+        "macro_AP": 0.6795503638221687,
+        "top1_with_argmax": 0.6569069069069069,
+        "mean_true_class_midrank": 7.421171171171171,
+        "median_true_class_midrank": 1.0
+      }
+    },
+    "max_abs_cosine_change_h_to_hW": 9.50092930995794e-08,
+    "raw_logits_map": {
+      "image_to_text": 0.0719500016379412,
+      "text_to_image": 0.042839983077772655,
+      "mean": 0.05739499235785693
+    },
+    "sigmoid_probability_map": {
+      "image_to_text": 0.2833098031887183,
+      "text_to_image": 0.24971483545971773,
+      "mean": 0.26651231932421804
+    }
+  },
+  "C_category": {
+    "cosine_quantiles_p05_p25_p50_p75_p95": {
+      "same_excluding_original_pair": [
+        0.2940357756973847,
+        0.7924642749158555,
+        0.9815658006637837,
+        0.9929835327569858,
+        0.996611352991666
+      ],
+      "different_class": [
+        0.19544374027452538,
+        0.32459426947450787,
+        0.7096726974387415,
+        0.9796939608659635,
+        0.9943522263018175
+      ]
+    },
+    "n_same_nonpaired": 16890,
+    "n_different": 1756002,
+    "same_vs_different_pooled_AUROC": 0.7071471822757796,
+    "embedding_map": {
+      "image_to_text": 0.05464722404380215,
+      "text_to_image": 0.05588234242291766,
+      "mean": 0.055264783233359906
+    },
+    "classification": {
+      "image": {
+        "score": "sigmoid(logits)",
+        "present_classes": 100,
+        "macro_AP": 0.39435283210274913,
+        "top1_with_argmax": 0.3866366366366366,
+        "mean_true_class_midrank": 10.528528528528529,
+        "median_true_class_midrank": 3.0
+      },
+      "text": {
+        "score": "sigmoid(logits)",
+        "present_classes": 100,
+        "macro_AP": 0.3832953331756938,
+        "top1_with_argmax": 0.5683183183183184,
+        "mean_true_class_midrank": 9.115615615615615,
+        "median_true_class_midrank": 1.0
+      }
+    },
+    "max_abs_cosine_change_h_to_hW": 1.6839228633713788e-07,
+    "raw_logits_map": {
+      "image_to_text": 0.05464722404380215,
+      "text_to_image": 0.05588234356653659,
+      "mean": 0.055264783805169373
+    },
+    "sigmoid_probability_map": {
+      "image_to_text": 0.2668917806652688,
+      "text_to_image": 0.20670569664924535,
+      "mean": 0.2367987386572571
+    }
+  },
+  "D_matching": {
+    "cosine_quantiles_p05_p25_p50_p75_p95": {
+      "same_excluding_original_pair": [
+        0.3379889454498994,
+        0.8507561296395592,
+        0.9762222986364781,
+        0.992016906393295,
+        0.9961895140158286
+      ],
+      "different_class": [
+        0.14610597533394237,
+        0.3023190252807968,
+        0.7777592125966466,
+        0.9701603103272859,
+        0.9931895639126905
+      ]
+    },
+    "n_same_nonpaired": 16890,
+    "n_different": 1756002,
+    "same_vs_different_pooled_AUROC": 0.7225414927403895,
+    "embedding_map": {
+      "image_to_text": 0.06826966833660293,
+      "text_to_image": 0.056117228761377695,
+      "mean": 0.06219344854899031
+    },
+    "classification": {
+      "image": {
+        "score": "sigmoid(logits)",
+        "present_classes": 100,
+        "macro_AP": 0.30071585303016674,
+        "top1_with_argmax": 0.3280780780780781,
+        "mean_true_class_midrank": 15.13963963963964,
+        "median_true_class_midrank": 3.0
+      },
+      "text": {
+        "score": "sigmoid(logits)",
+        "present_classes": 100,
+        "macro_AP": 0.5676129418605398,
+        "top1_with_argmax": 0.5915915915915916,
+        "mean_true_class_midrank": 9.682057057057056,
+        "median_true_class_midrank": 1.0
+      }
+    },
+    "max_abs_cosine_change_h_to_hW": 5.5740637328050013e-08,
+    "raw_logits_map": {
+      "image_to_text": 0.0682697814452893,
+      "text_to_image": 0.05611724825037752,
+      "mean": 0.062193514847833406
+    },
+    "sigmoid_probability_map": {
+      "image_to_text": 0.25155652755132424,
+      "text_to_image": 0.22621076931492048,
+      "mean": 0.23888364843312238
+    }
+  }
+}
