@@ -1,0 +1,9 @@
+{
+  "i2t_map_all": 0.5527711510658264,
+  "t2i_map_all": 0.5708410143852234,
+  "mean_map": 0.5618060827255249,
+  "queries": 4366,
+  "candidates": 4366,
+  "paired_items_included": true,
+  "confidence_filter": false
+}

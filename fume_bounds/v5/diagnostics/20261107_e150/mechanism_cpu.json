@@ -1,0 +1,40 @@
+{
+  "scope": "Analytic/synthetic checks only; released NPZ binaries were not loaded in this process.",
+  "archive_commit": "6de422a322eb5b47db7b5f5be2b81c40b55c1d16",
+  "training_commit": "2a8980a3ab85d35da68660db79813387016047c1",
+  "constant_1_percent_prediction_reference": {
+    "class_count": 100,
+    "positive_labels_per_sample": 1,
+    "probability_each_label": 0.01,
+    "logit_each_label": -4.59511985013459,
+    "logit_vector_l2_norm": 45.9511985013459,
+    "mean_binary_cross_entropy": 0.05600153435484734,
+    "constant_similarity_fume_cl_B300": 12.790523196230899
+  },
+  "initial_zero_logits_per_sample_bce_gradient": {
+    "positive_coordinate": -0.005,
+    "negative_coordinate": 0.005,
+    "common_all_coordinates_mean": 0.0049,
+    "common_component_fraction_of_squared_norm": 0.9603999999999998,
+    "note": "Gradient with respect to logits at exactly zero, not an observed encoder parameter gradient."
+  },
+  "normalization_gradient_checks": {
+    "norm_scaling_factor": 100,
+    "max_error_g100_minus_g1_div100": 4.0657581468206416e-20,
+    "collapsed_B6_cl": 4.795790545596742,
+    "collapsed_B6_expected_cl": 4.795790545596741,
+    "collapsed_gradient_max_abs": 2.8888949165808538e-34,
+    "note": "Norm scaling is an h-gradient identity with fixed directions, not a statement of parameter-gradient ratios during Adam."
+  },
+  "minimal_no_necessity_onehot_geometry": {
+    "max_l2_residual_relu_zW_vs_onehot": 1.0249574703854511e-15,
+    "note": "Existence of a feasible representation only. No neural-network convergence or accuracy improvement is established."
+  },
+  "quoted_not_recomputed_B_epoch3_training_log": {
+    "classification": 0.05640109442174435,
+    "contrastive": 12.79060084025065,
+    "h_norm_image": 46.54759585062663,
+    "h_norm_text": 46.14947789510091,
+    "source_path": "fume_bounds/v5/diagnostics/20261107_ab150/runs/B_bce/history.jsonl:3"
+  }
+}

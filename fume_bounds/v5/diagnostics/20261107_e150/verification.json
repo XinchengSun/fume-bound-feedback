@@ -1,0 +1,11 @@
+{
+  "commit": "bbd3b6fe66d47a65ec1b31a9b8149ce55ecda5de",
+  "epochs": 150,
+  "total_updates": 4500,
+  "matched_order_hashes": 150,
+  "matched_initial_backbone": true,
+  "probe_batches": 150,
+  "mean_test_map_pct": 56.18060827255249,
+  "E_minus_A_pp": -0.7215112447738647,
+  "E_minus_B_pp": 51.59675404429436
+}
