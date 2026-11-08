@@ -1,0 +1,68 @@
+{
+  "environment": {
+    "python": "3.13.5",
+    "torch": "2.10.0+cpu",
+    "device": "cpu"
+  },
+  "source_commit": "6fc7fd56baef92ce43f1a32a52c1fbc100035c80",
+  "legacy_pair_mixup_collision": {
+    "identical_images": true,
+    "identical_texts": true,
+    "legacy_target_from_positive_pairs": 1.0,
+    "legacy_target_from_negative_pairs": 0.0,
+    "exact_mix_coefficient": 0.5,
+    "caveat": "Continuous Beta sampling has zero probability of exactly 0.5. This proves a possible endpoint-supervision inconsistency, not its frequency or its causal impact on NUS/INRIA performance."
+  },
+  "query_conditioned_check": {
+    "identical_queries": true,
+    "identical_mixed_candidates": true,
+    "targets": [
+      0.5,
+      0.5
+    ]
+  },
+  "concentration_check": [
+    {
+      "strength": 4.0,
+      "alpha": 2.0,
+      "beta": 2.0,
+      "mean": 0.5,
+      "soft_target": 0.5,
+      "expected_ce": 0.8333333333333331,
+      "model_AU": 0.5833333333333331,
+      "model_EU": 0.10981384722661214
+    },
+    {
+      "strength": 20.0,
+      "alpha": 10.0,
+      "beta": 10.0,
+      "mean": 0.5,
+      "soft_target": 0.5,
+      "expected_ce": 0.718771403175428,
+      "model_AU": 0.6687714031754277,
+      "model_EU": 0.024375777384517572
+    },
+    {
+      "strength": 200.0,
+      "alpha": 100.0,
+      "beta": 100.0,
+      "mean": 0.5,
+      "soft_target": 0.5,
+      "expected_ce": 0.6956534304818227,
+      "model_AU": 0.6906534304818237,
+      "model_EU": 0.0024937500781215816
+    },
+    {
+      "strength": 2000.0,
+      "alpha": 1000.0,
+      "beta": 1000.0,
+      "mean": 0.5,
+      "soft_target": 0.5,
+      "expected_ce": 0.6933972430599376,
+      "model_AU": 0.6928972430599374,
+      "model_EU": 0.0002499375000079018
+    }
+  ],
+  "interpretation": "A soft mean target alone does not identify epistemic concentration; no counterexample here proves real-data performance degradation or invalidates VLS empirical results.",
+  "new_INRIA_or_NUS_training": false
+}
