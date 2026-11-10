@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-10",
+  "base_commit": "0f20d438ad424fecdf2faffc48285fedbd66fc3d",
+  "real_nus_training": {
+    "status": "not_run",
+    "runs_started": 0,
+    "planned_runs": 12,
+    "planned_updates": 1620,
+    "new_retrieval_metrics": null,
+    "blockers": [
+      "The previously used local SSH forward on 127.0.0.1:2226 refuses connections in this execution environment.",
+      "Registered NUS input/checkpoint files are not mounted in this environment."
+    ],
+    "certification_gate_does_not_block_empirical_training": true
+  },
+  "unit_tests": {
+    "passed": 9,
+    "failed": 0,
+    "command": "python -m unittest discover -s fume_bounds/tests -p 'test_feedback_training_*.py' -v",
+    "log": "verification/unit_tests.log"
+  },
+  "synthetic_integration": {
+    "status": "completed",
+    "source_kind": "synthetic",
+    "real_training_completed": false,
+    "order_seeds": [
+      110104,
+      110105
+    ],
+    "epochs": 2,
+    "arms": [
+      "original",
+      "predictive_mean",
+      "stop_sd",
+      "full"
+    ],
+    "updates_per_arm_per_seed": 12,
+    "total_updates": 96,
+    "endpoint_rows": 24,
+    "protocol_sha256": "620db924b5cbf46087a80dce741f9a62104ad937bcf316a7ecb8dabd982db304",
+    "scope": "Code and optimizer/data-flow validation only; not NUS performance evidence."
+  },
+  "missing_input_test": {
+    "passed": true,
+    "process_exit": 1,
+    "status": "not_run",
+    "training_started": false,
+    "test_evaluated": false,
+    "synthetic_fallback": false
+  },
+  "verified_behaviors": [
+    "All training rows retained once per epoch; singleton tail merged.",
+    "Posterior parameters/covariance/implicit gradients and four objectives match archived functions on controlled fixtures.",
+    "Full and stop_sd have identical forward loss and distinct standard-deviation gradients.",
+    "Extreme-logit predictive NLL and gradients remain finite.",
+    "Actual runner preserves Adam steps across batches and defers test metrics until all arms and selections are fixed.",
+    "Summary rejects incomplete pairs, duplicated keys, nonfinite metrics and wrong units; final and validation-best remain separate."
+  ],
+  "tested_sha256": {
+    "fume_bounds/feedback_training/engine.py": "453d50b678a133a6c822f07958325bdafe79a3c14465c941f336f734ce042400",
+    "fume_bounds/feedback_training/run.py": "b40924da7a6d75030bfcc5092e1d590c1a51f3d5b49dcaa96e3899124aca766a",
+    "fume_bounds/feedback_training/summarize.py": "912ada2142ca8e8edd46c8f8e1e4a27e8eea7481d03a6245246239f2e9708aee",
+    "fume_bounds/tests/test_feedback_training_engine.py": "c353223cdfeec56e8d08e7107c394bcc9e1bff47a39416693944661f47c1c9c5",
+    "fume_bounds/tests/test_feedback_training_summary.py": "d5ad57a656abac3a4593c8006d231fcefd45baab9d1928ee3ea570b57918fba9"
+  }
+}

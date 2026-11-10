@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "source_kind": "synthetic",
+  "real_training_completed": false,
+  "synthetic_training_completed": true,
+  "training_started": true,
+  "test_evaluated": true,
+  "training_steps_per_arm": 12,
+  "seconds": 1.2376496600008977,
+  "protocol_sha256": "620db924b5cbf46087a80dce741f9a62104ad937bcf316a7ecb8dabd982db304"
+}

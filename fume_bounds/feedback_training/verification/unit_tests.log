@@ -1,0 +1,14 @@
+test_actual_runner_keeps_adam_history_and_defers_test_evaluation (test_feedback_training_engine.EngineCompatibility.test_actual_runner_keeps_adam_history_and_defers_test_evaluation) ... ok
+test_all_rows_kept_and_order_reproducible (test_feedback_training_engine.EngineCompatibility.test_all_rows_kept_and_order_reproducible) ... ok
+test_objectives_and_encoder_gradients_match_archive (test_feedback_training_engine.EngineCompatibility.test_objectives_and_encoder_gradients_match_archive) ... ok
+test_posterior_values_and_implicit_gradient_match_archive (test_feedback_training_engine.EngineCompatibility.test_posterior_values_and_implicit_gradient_match_archive) ... ok
+test_predictive_loss_remains_finite_at_extreme_logits (test_feedback_training_engine.EngineCompatibility.test_predictive_loss_remains_finite_at_extreme_logits) ... ok
+test_missing_or_duplicate_pair_is_rejected (test_feedback_training_summary.SummaryTests.test_missing_or_duplicate_pair_is_rejected) ... ok
+test_no_test_based_epoch_selection (test_feedback_training_summary.SummaryTests.test_no_test_based_epoch_selection) ... ok
+test_nonfinite_percentage_and_seed_mismatch_are_rejected (test_feedback_training_summary.SummaryTests.test_nonfinite_percentage_and_seed_mismatch_are_rejected) ... ok
+test_units_direction_and_synthetic_scope (test_feedback_training_summary.SummaryTests.test_units_direction_and_synthetic_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.032s
+
+OK
