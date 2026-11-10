@@ -1,0 +1,11 @@
+{
+  "Y": "same stored integer category for the image and text",
+  "version": "FUME nus_deep single-label ten-class subset",
+  "label_source_hash": "338d710bd99bdfca28075d87ea0bf5875cdae83cd4b0c5bb931d390ce3c6091b",
+  "multilabel_rule": "not applicable",
+  "X": "raw image and text, excluding stored labels and identifiers",
+  "randomness": "natural pairing of source entities; no specified or repeated human relabeling for fixed content",
+  "target": "P*(Y=1|raw image,text)",
+  "observed_target_semantics": "database category equality",
+  "real_semantic_probability": "target_semantics_unresolved"
+}

@@ -1,0 +1,16 @@
+{
+  "historical_fit_pairs": 1024,
+  "historical_fit_entity_rows": 2048,
+  "historical_fit_positive": 103,
+  "index_space": "official train loader seed 2",
+  "seed": 41531,
+  "selection": "default_rng(seed).permutation(8000)[5600:7648].reshape(2,1024)",
+  "indices_sha256": "994f17c92b9728759eb05877b867de7aa5e7c100139a87521195aa6e0e909536",
+  "new_fit_pairs": 0,
+  "new_fit_entities": 0,
+  "cert_pairs": 0,
+  "cert_entities": 0,
+  "cert_entity_reuse": 0,
+  "cert_sampling_seed": null,
+  "cert_positive_rate": null
+}

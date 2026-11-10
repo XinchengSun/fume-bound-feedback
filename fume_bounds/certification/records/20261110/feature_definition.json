@@ -1,0 +1,8 @@
+{
+  "dim": 11,
+  "vector": "[1, 10*(normalize(hI)*normalize(hT))] elementwise",
+  "intercept": true,
+  "standardization": "none",
+  "checkpoint_epoch": 6,
+  "checkpoint_sha256": "01eacabdde0e8f9ee88e506bb1c763a4a55e0e3210f6b904bd19fba6f67da290"
+}

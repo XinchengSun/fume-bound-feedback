@@ -1,0 +1,55 @@
+{
+  "roles": {
+    "encoder_fit_entities": "all 8000 train rows (both modalities)",
+    "checkpoint_selection_entities": "1000 valid rows, best mean validation mAP across 100 epochs, epoch 6",
+    "hyperparameter_and_method_history": "validation-based LR/batch/temperature comparisons and previously inspected results on all 1000 test rows",
+    "head_fit_entities": "prior head: 2048 train-loader rows, see hashed indices; this stage created none",
+    "cert_entities": [],
+    "test_query_entities": "all 1000 test rows, each modality in turn",
+    "gallery_entities": "the same 1000 test rows in the opposite modality; 1000 overlapping row sources"
+  },
+  "scope": "registered NUS-10k FUME sources; project dataset directory and experiment artifacts",
+  "source_files": {
+    "fume_feedback_mechanism_20261110/averages.csv": "4082cb6c5dfd7fa240b5e94167b0e875992a6dfc6bdb8d23f903b461968b8ee3",
+    "fume_feedback_mechanism_20261110/paired.csv": "9381e7c967e8c3b521313ba778e16d69ab927923c994eca2461ef6a978c484e1",
+    "fume_feedback_mechanism_20261110/batches.json": "f21a483580afeb9224deb421a85a671cd62f0e8ee4c47cd610bb8911042a973e",
+    "fume_feedback_mechanism_20261110/raw.csv": "05d59ba906cd75941dabe29e56b4e68c41ed39b218b328398034c9a1176a695c",
+    "fume_feedback_mechanism_20261110/gradients.csv": "6526ed6a36d3a972501eb95ccede3d3523f405e0b6db4651089980246a35c389",
+    "fume_feedback_mechanism_20261110/mechanism.py": "6d9ac680e11210b2c4013a07ff2deb350c77e390c4e8440fd0fce4a05afe2bae",
+    "fume_feedback_mechanism_20261110/summarize.py": "3c96df244a0cb04821451d89ab04201b2856e5ff1a97d2df9ffd0b10ecc3f87c",
+    "fume_feedback_mechanism_20261110/README.md": "889659ab020fd58a3cb0482e6578fc13fca7676c4f4b1802ea4292874a51f0cd",
+    "fume_feedback_mechanism_20261110/run.log": "eb006638411e3634764c916b412b16f3ce0b234e0c1de89268d59bea456ce37d",
+    "fume_real_feedback_20261110/experiment.py": "99afc2abaf42ec38d142ebaa49aeb2457b2fa88a1912c93c71d96064d6cdd7d7",
+    "fume_real_feedback_20261110/extract.py": "a8b4c2cbaf9f49697c8e6e229e6d94811418279855fee76ab413c5631c1bccd8",
+    "fume_real_feedback_20261110/provenance.json": "52099bad8bc595f6c94352e92afab09a744b23b975f472c39f9bdae26ff87cc2",
+    "fume_real_feedback_20261110/result.json": "06050054f093be343834bb9aab47ed8273a9b0d907ef487fe61d7ac9b830ec6f",
+    "fume_nus_official_seed2_replay_20261108/replay.py": "e3c5ec851b13a5f111ee5321280903e9a71c5ac1c0c040b42d3631869e250ed5",
+    "fume_nus_official_seed2_replay_20261108/result.json": "fb9c013efc8c45dd61b435da1ce1e80a0f7522319c0ae4a66c0422ba894d9ac6",
+    "fume_nus_official_seed2_replay_20261108/curve.jsonl": "b7f1c83b79dcb473e72cd494301b8cc9b27451cc4b87e053a8fb1ec9a8d55d4d",
+    "fume_nus_official_seed2_replay_20261108/changes.diff": "9bd13c493173251ee629d5985283821b67b857a651a33569279feff19ff30b18",
+    "fume_nus_lr_batch10_20261108/summary.csv": "5541a18ba2416ef17769d79fe77f8ebc67a1287834817fd5ea5a16d5db5a8211",
+    "fume_nus_tau12_seed2_20261108/results.csv": "a0bb75a45bb6142d3d504714a5c09936f80c0a29ce35553e65f68b0f8c6eedc5"
+  },
+  "checkpoint_hash": "01eacabdde0e8f9ee88e506bb1c763a4a55e0e3210f6b904bd19fba6f67da290",
+  "split_hash_definition": "SHA256 of whole HDF5, including fixed train/valid/test arrays",
+  "split_hash": "338d710bd99bdfca28075d87ea0bf5875cdae83cd4b0c5bb931d390ce3c6091b",
+  "historical_fit_feature_hash": "d8db1dacd16d07f439f7408e9731fcbb36aa3ba83d9ec472a81bbfbf1e0c2370",
+  "old_runs": "imported_exact_csv_not_rerun",
+  "prior_mechanism_config": {
+    "seed": 41531,
+    "new_batch_seed": 110104,
+    "first_batch": "historical",
+    "batches": 8,
+    "step_per_reset": 1,
+    "encoder_checkpoint_count": 1,
+    "test_gallery_count": 1,
+    "lr": 5e-05,
+    "betas": [
+      0.5,
+      0.999
+    ],
+    "batch": 300,
+    "positive_mass": 0.5,
+    "negative_mass": 0.5
+  }
+}

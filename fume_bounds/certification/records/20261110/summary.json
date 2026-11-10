@@ -1,0 +1,15 @@
+{
+  "stage": "P0a",
+  "decision": "blocked",
+  "implementation_correct": "scalar_gold_passed_only",
+  "model_conditional_validity": "theoretical_under_assumptions; NUS provenance_blocked and target_semantics_unresolved",
+  "practical_informativeness": "not_tested",
+  "retrieval_gain": "not_tested",
+  "training_feedback_gain": "not_tested",
+  "true_probability_coverage": null,
+  "coverage_status": "not_observable_from_single_labels",
+  "full_backend": "not_run",
+  "oracle_mc": "not_run",
+  "NUS_certification": "not_run",
+  "scalar_reference": "scalar_gold.json"
+}

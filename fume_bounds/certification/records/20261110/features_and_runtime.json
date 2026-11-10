@@ -1,0 +1,39 @@
+{
+  "shape": [
+    1024,
+    11
+  ],
+  "rank": 11,
+  "singular_values": [
+    38.10518623455239,
+    35.99165688427732,
+    34.969082177621196,
+    33.537332070940685,
+    33.12338443464256,
+    31.206176213280106,
+    30.25027098482197,
+    29.63369553155699,
+    28.152563679019472,
+    27.631637401844003,
+    25.418744093869666
+  ],
+  "rank_scope": "historical fit only",
+  "cert_rank": null,
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "numpy": "2.2.6",
+    "scipy": "1.17.1",
+    "h5py": "3.16.0",
+    "mpmath": "1.3.0",
+    "cvxpy": null,
+    "clarabel": null,
+    "python-flint": null,
+    "gmpy2": null
+  },
+  "frozen_output_dtype": "float32",
+  "design_dtype": "float64",
+  "design_sha256": "d8db1dacd16d07f439f7408e9731fcbb36aa3ba83d9ec472a81bbfbf1e0c2370",
+  "dataset_sha256": "338d710bd99bdfca28075d87ea0bf5875cdae83cd4b0c5bb931d390ce3c6091b",
+  "checkpoint_sha256": "01eacabdde0e8f9ee88e506bb1c763a4a55e0e3210f6b904bd19fba6f67da290",
+  "cache_sha256": "f99ee36b2df15171a14764ae90972a35768f86f16bd8b9becec09c90d7edaabe"
+}

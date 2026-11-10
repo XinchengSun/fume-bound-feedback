@@ -1,0 +1,8 @@
+{
+  "target_model": "assumed_not_proven",
+  "feature_sufficiency": "assumed_not_proven",
+  "independent_cert_pool": "provenance_blocked",
+  "conditional_Bernoulli_sampling": "not_established",
+  "entity_alias_resolution": "missing",
+  "future_pairing": "before seeing labels or predictions; each entity block at most once"
+}
