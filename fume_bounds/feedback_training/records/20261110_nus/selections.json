@@ -1,0 +1,74 @@
+[
+  {
+    "seed": 110104,
+    "arm": "original",
+    "final_epoch": 5,
+    "best_epoch": 0
+  },
+  {
+    "seed": 110104,
+    "arm": "predictive_mean",
+    "final_epoch": 5,
+    "best_epoch": 0
+  },
+  {
+    "seed": 110104,
+    "arm": "stop_sd",
+    "final_epoch": 5,
+    "best_epoch": 0
+  },
+  {
+    "seed": 110104,
+    "arm": "full",
+    "final_epoch": 5,
+    "best_epoch": 0
+  },
+  {
+    "seed": 110105,
+    "arm": "original",
+    "final_epoch": 5,
+    "best_epoch": 3
+  },
+  {
+    "seed": 110105,
+    "arm": "predictive_mean",
+    "final_epoch": 5,
+    "best_epoch": 2
+  },
+  {
+    "seed": 110105,
+    "arm": "stop_sd",
+    "final_epoch": 5,
+    "best_epoch": 0
+  },
+  {
+    "seed": 110105,
+    "arm": "full",
+    "final_epoch": 5,
+    "best_epoch": 2
+  },
+  {
+    "seed": 110106,
+    "arm": "original",
+    "final_epoch": 5,
+    "best_epoch": 3
+  },
+  {
+    "seed": 110106,
+    "arm": "predictive_mean",
+    "final_epoch": 5,
+    "best_epoch": 3
+  },
+  {
+    "seed": 110106,
+    "arm": "stop_sd",
+    "final_epoch": 5,
+    "best_epoch": 0
+  },
+  {
+    "seed": 110106,
+    "arm": "full",
+    "final_epoch": 5,
+    "best_epoch": 0
+  }
+]

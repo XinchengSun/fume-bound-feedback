@@ -1,0 +1,66 @@
+{
+  "source_kind": "real",
+  "synthetic": false,
+  "order_seeds": [
+    110104,
+    110105,
+    110106
+  ],
+  "config": {
+    "epochs": 5,
+    "batch_size": 300,
+    "lr": 5e-05,
+    "feedback_weight": 1.0,
+    "adam_betas": [
+      0.5,
+      0.999
+    ],
+    "alpha": 0.5,
+    "contrastive_temperature": 1.0,
+    "arms": [
+      "original",
+      "predictive_mean",
+      "stop_sd",
+      "full"
+    ],
+    "threads": 3,
+    "support_seed": 41531,
+    "support_pairs": 1024,
+    "training_rows": 8000,
+    "support_rows_also_train": true,
+    "posterior": "Laplace logistic; independent N(0,4) prior; 24-point GH",
+    "primary_endpoint": "fixed final epoch",
+    "secondary_endpoint": "validation-best mAP, earliest tie",
+    "checkpoint_initialization_count": 1,
+    "order_seeds_are_model_seeds": false,
+    "units": "probabilities, mAP in [0,1]; entropy in nats; mAP differences multiply by 100 for pp"
+  },
+  "features_sha256": "f99ee36b2df15171a14764ae90972a35768f86f16bd8b9becec09c90d7edaabe",
+  "input_provenance": {
+    "source_kind": "real",
+    "features_sha256": "f99ee36b2df15171a14764ae90972a35768f86f16bd8b9becec09c90d7edaabe",
+    "epoch": 6,
+    "checkpoint_sha256": "01eacabdde0e8f9ee88e506bb1c763a4a55e0e3210f6b904bd19fba6f67da290",
+    "dataset_sha256": "338d710bd99bdfca28075d87ea0bf5875cdae83cd4b0c5bb931d390ce3c6091b",
+    "extraction_script_sha256": "b40924da7a6d75030bfcc5092e1d590c1a51f3d5b49dcaa96e3899124aca766a",
+    "archived_extraction_reference_sha256": "61849279b1c748ecba322042090c4a5d3d0b92b2153910ed9e952bfaa783fd3a",
+    "extraction_change": "Same loader/architecture/seed/forward; test metrics deferred until training ends",
+    "independent_certification": false
+  },
+  "evaluation": {
+    "train_queries": 8000,
+    "val_queries": 1000,
+    "test_queries": 1000
+  },
+  "code_sha256": {
+    "engine.py": "453d50b678a133a6c822f07958325bdafe79a3c14465c941f336f734ce042400",
+    "run.py": "b40924da7a6d75030bfcc5092e1d590c1a51f3d5b49dcaa96e3899124aca766a"
+  },
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "numpy": "2.2.6",
+    "scipy": "1.17.1"
+  },
+  "statistical_scope": "empirical feedback pilot; no independent probability certification",
+  "protocol_sha256": "397f9ee04081e00ca08631813aba14107695fd001443b7fc6835ed0cf36d0e7f"
+}

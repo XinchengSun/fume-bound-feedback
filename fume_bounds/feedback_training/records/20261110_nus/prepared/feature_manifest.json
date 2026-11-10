@@ -1,0 +1,11 @@
+{
+  "source_kind": "real",
+  "features_sha256": "f99ee36b2df15171a14764ae90972a35768f86f16bd8b9becec09c90d7edaabe",
+  "epoch": 6,
+  "checkpoint_sha256": "01eacabdde0e8f9ee88e506bb1c763a4a55e0e3210f6b904bd19fba6f67da290",
+  "dataset_sha256": "338d710bd99bdfca28075d87ea0bf5875cdae83cd4b0c5bb931d390ce3c6091b",
+  "extraction_script_sha256": "b40924da7a6d75030bfcc5092e1d590c1a51f3d5b49dcaa96e3899124aca766a",
+  "archived_extraction_reference_sha256": "61849279b1c748ecba322042090c4a5d3d0b92b2153910ed9e952bfaa783fd3a",
+  "extraction_change": "Same loader/architecture/seed/forward; test metrics deferred until training ends",
+  "independent_certification": false
+}
