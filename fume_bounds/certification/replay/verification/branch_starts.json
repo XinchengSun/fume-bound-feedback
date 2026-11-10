@@ -1,0 +1,2906 @@
+[
+  {
+    "batch": 0,
+    "group": "base",
+    "kind": "original",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 0,
+    "group": "alone",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 0,
+    "group": "plus_FUME",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 0,
+    "group": "alone",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 0,
+    "group": "plus_FUME",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 0,
+    "group": "alone",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 0,
+    "group": "plus_FUME",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 0,
+    "group": "alone",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 0,
+    "group": "plus_FUME",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 0,
+    "group": "alone",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 0,
+    "group": "plus_FUME",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 1,
+    "group": "base",
+    "kind": "original",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 1,
+    "group": "alone",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 1,
+    "group": "plus_FUME",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 1,
+    "group": "alone",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 1,
+    "group": "plus_FUME",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 1,
+    "group": "alone",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 1,
+    "group": "plus_FUME",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 1,
+    "group": "alone",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 1,
+    "group": "plus_FUME",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 1,
+    "group": "alone",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 1,
+    "group": "plus_FUME",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 2,
+    "group": "base",
+    "kind": "original",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 2,
+    "group": "alone",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 2,
+    "group": "plus_FUME",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 2,
+    "group": "alone",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 2,
+    "group": "plus_FUME",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 2,
+    "group": "alone",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 2,
+    "group": "plus_FUME",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 2,
+    "group": "alone",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 2,
+    "group": "plus_FUME",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 2,
+    "group": "alone",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 2,
+    "group": "plus_FUME",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 3,
+    "group": "base",
+    "kind": "original",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 3,
+    "group": "alone",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 3,
+    "group": "plus_FUME",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 3,
+    "group": "alone",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 3,
+    "group": "plus_FUME",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 3,
+    "group": "alone",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 3,
+    "group": "plus_FUME",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 3,
+    "group": "alone",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 3,
+    "group": "plus_FUME",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 3,
+    "group": "alone",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 3,
+    "group": "plus_FUME",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 4,
+    "group": "base",
+    "kind": "original",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 4,
+    "group": "alone",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 4,
+    "group": "plus_FUME",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 4,
+    "group": "alone",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 4,
+    "group": "plus_FUME",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 4,
+    "group": "alone",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 4,
+    "group": "plus_FUME",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 4,
+    "group": "alone",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 4,
+    "group": "plus_FUME",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 4,
+    "group": "alone",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 4,
+    "group": "plus_FUME",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 5,
+    "group": "base",
+    "kind": "original",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 5,
+    "group": "alone",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 5,
+    "group": "plus_FUME",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 5,
+    "group": "alone",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 5,
+    "group": "plus_FUME",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 5,
+    "group": "alone",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 5,
+    "group": "plus_FUME",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 5,
+    "group": "alone",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 5,
+    "group": "plus_FUME",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 5,
+    "group": "alone",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 5,
+    "group": "plus_FUME",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 6,
+    "group": "base",
+    "kind": "original",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 6,
+    "group": "alone",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 6,
+    "group": "plus_FUME",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 6,
+    "group": "alone",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 6,
+    "group": "plus_FUME",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 6,
+    "group": "alone",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 6,
+    "group": "plus_FUME",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 6,
+    "group": "alone",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 6,
+    "group": "plus_FUME",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 6,
+    "group": "alone",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 6,
+    "group": "plus_FUME",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 7,
+    "group": "base",
+    "kind": "original",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 7,
+    "group": "alone",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 7,
+    "group": "plus_FUME",
+    "kind": "plain",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 7,
+    "group": "alone",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 7,
+    "group": "plus_FUME",
+    "kind": "map_logit",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 7,
+    "group": "alone",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 7,
+    "group": "plus_FUME",
+    "kind": "predictive_mean",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 7,
+    "group": "alone",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 7,
+    "group": "plus_FUME",
+    "kind": "stop_sd",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 7,
+    "group": "alone",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  },
+  {
+    "batch": 7,
+    "group": "plus_FUME",
+    "kind": "full",
+    "rng": {
+      "python": "a01360a3eb14ff05413b80688e700fd1623ffdee42a59acc4790f22dc844db0c",
+      "numpy_global": "10674db94d65b276f9bbeca558725934ed8a2ce22451c85e4fa614af72405c17",
+      "numpy_generator": "e5fa1d7394c382d55fb322e25329c0e67328ce38aff6d2bfef2010353d8738ce",
+      "torch_cpu": "bb0d587f10d273a5db64633620a7708f7642b4c19e83101e7b20bdc9c242d4e7"
+    },
+    "weight_sha256": [
+      "6f28b1504733c885be800c8d55f9884361cbcd8ecc646254fd3402db406fde5d",
+      "fe5f58761f49f0a30b7fcf56a906f4b24c0a5f89a1a6d6e8c4d85faa94da88b0"
+    ],
+    "fixed_W_sha256": "b7cbfefda5118a733cb47693ae7622ee2d746b722f0c631da960060e98b4d1f8",
+    "adam": {
+      "lr": 5e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": false
+    },
+    "state_entries": 0
+  }
+]

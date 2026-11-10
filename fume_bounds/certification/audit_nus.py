@@ -9,6 +9,7 @@ from pathlib import Path
 import h5py
 import numpy as np
 import torch
+from eligibility import classify, load_manifest
 
 
 def digest(path):
@@ -61,10 +62,17 @@ def main():
                 "within_split_repeated_rows_beyond_first":{s:sum(c.values())-len(c) for s,c in hashes.items()},
                 "between_split_shared_unique_vectors":{a+"__"+b:len(hashes[a].keys() & hashes[b].keys())
                                                        for a,b in combinations(split_keys,2)}}
+    manifest_path = Path(__file__).with_name("historical_manifest.json")
+    records, references = load_manifest(manifest_path)
+    eligibility, statuses = classify(records, references)
+    assert len(statuses) == sum(sum(v.values()) for v in label_counts.values())
+    used = [set(item["documented_uses"]) for item in statuses]
     write("entity_overlap_report.json",dict(fields=keys,attributes=attrs,label_counts=label_counts,
           exact_feature_hash_audit=by_modality,alias_verification="unknown; no canonical source IDs",
-          row_role_intersections={"historical_head_fit_and_encoder_fit":2048,"test_queries_and_gallery":1000},
-          eligible_cert_rows=0,cert_role_overlaps=0))
+          row_role_intersections={"historical_head_fit_and_encoder_fit":sum({"head_fit","encoder_fit"} <= u for u in used),
+                                  "test_queries_and_gallery":sum({"test_query","gallery"} <= u for u in used)},
+          eligibility=eligibility, eligible_cert_rows=eligibility["candidate_rows"]["eligible"],
+          historical_manifest_sha256=digest(manifest_path)))
     # The archived feedback study sampled from permuted official loader rows, not HDF5 row order.
     order = np.random.default_rng(41531).permutation(8000)[5600:7648].reshape(2,-1)
     assert np.unique(order).size == 2048

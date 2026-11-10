@@ -1,0 +1,114 @@
+[
+  {
+    "published_file": "audit_io.py",
+    "source": "fume_nus_official_seed2_replay_20261108/audit_io.py",
+    "original_sha256": "3e24372ff1857f0f33e5a586757b5b71841e6de5a39dc984efada0c656bfc18a",
+    "published_sha256": "3e24372ff1857f0f33e5a586757b5b71841e6de5a39dc984efada0c656bfc18a",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "changes.diff",
+    "source": "fume_nus_official_seed2_replay_20261108/changes.diff",
+    "original_sha256": "9bd13c493173251ee629d5985283821b67b857a651a33569279feff19ff30b18",
+    "published_sha256": "9bd13c493173251ee629d5985283821b67b857a651a33569279feff19ff30b18",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "experiment.py",
+    "source": "fume_real_feedback_20261110/experiment.py",
+    "original_sha256": "99afc2abaf42ec38d142ebaa49aeb2457b2fa88a1912c93c71d96064d6cdd7d7",
+    "published_sha256": "99afc2abaf42ec38d142ebaa49aeb2457b2fa88a1912c93c71d96064d6cdd7d7",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "extract.py",
+    "source": "fume_real_feedback_20261110/extract.py",
+    "original_sha256": "a8b4c2cbaf9f49697c8e6e229e6d94811418279855fee76ab413c5631c1bccd8",
+    "published_sha256": "61849279b1c748ecba322042090c4a5d3d0b92b2153910ed9e952bfaa783fd3a",
+    "change": "input root from FUME_REPLAY_ROOT"
+  },
+  {
+    "published_file": "mechanism.py",
+    "source": "fume_feedback_mechanism_20261110/mechanism.py",
+    "original_sha256": "6d9ac680e11210b2c4013a07ff2deb350c77e390c4e8440fd0fce4a05afe2bae",
+    "published_sha256": "6d9ac680e11210b2c4013a07ff2deb350c77e390c4e8440fd0fce4a05afe2bae",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "official_curve.jsonl",
+    "source": "fume_nus_official_seed2_replay_20261108/curve.jsonl",
+    "original_sha256": "b7f1c83b79dcb473e72cd494301b8cc9b27451cc4b87e053a8fb1ec9a8d55d4d",
+    "published_sha256": "b7f1c83b79dcb473e72cd494301b8cc9b27451cc4b87e053a8fb1ec9a8d55d4d",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "official_result.json",
+    "source": "fume_nus_official_seed2_replay_20261108/result.json",
+    "original_sha256": "fb9c013efc8c45dd61b435da1ce1e80a0f7522319c0ae4a66c0422ba894d9ac6",
+    "published_sha256": "fb9c013efc8c45dd61b435da1ce1e80a0f7522319c0ae4a66c0422ba894d9ac6",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "replay.py",
+    "source": "fume_nus_official_seed2_replay_20261108/replay.py",
+    "original_sha256": "e3c5ec851b13a5f111ee5321280903e9a71c5ac1c0c040b42d3631869e250ed5",
+    "published_sha256": "e3c5ec851b13a5f111ee5321280903e9a71c5ac1c0c040b42d3631869e250ed5",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "result.json",
+    "source": "fume_real_feedback_20261110/result.json",
+    "original_sha256": "06050054f093be343834bb9aab47ed8273a9b0d907ef487fe61d7ac9b830ec6f",
+    "published_sha256": "06050054f093be343834bb9aab47ed8273a9b0d907ef487fe61d7ac9b830ec6f",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "summarize.py",
+    "source": "fume_feedback_mechanism_20261110/summarize.py",
+    "original_sha256": "3c96df244a0cb04821451d89ab04201b2856e5ff1a97d2df9ffd0b10ecc3f87c",
+    "published_sha256": "3c96df244a0cb04821451d89ab04201b2856e5ff1a97d2df9ffd0b10ecc3f87c",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "upstream/custom_dataset.py",
+    "source": "siyuancncd/FUME@5dd7a306aa505d8f60265b0353ff98de19ad9815:2025-CVPR-FUME/custom_dataset.py",
+    "original_sha256": "24b7363a75156d45bfabd940404f3fc95f6317b9521ecb63c9297e3be9d655b4",
+    "published_sha256": "24b7363a75156d45bfabd940404f3fc95f6317b9521ecb63c9297e3be9d655b4",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "upstream/evaluate.py",
+    "source": "siyuancncd/FUME@5dd7a306aa505d8f60265b0353ff98de19ad9815:2025-CVPR-FUME/evaluate.py",
+    "original_sha256": "6d8f43172b45891e98d38cb7e843dac626c86d5b09ee5ca4cdeca582386dbfd3",
+    "published_sha256": "6d8f43172b45891e98d38cb7e843dac626c86d5b09ee5ca4cdeca582386dbfd3",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "upstream/main.py",
+    "source": "siyuancncd/FUME@5dd7a306aa505d8f60265b0353ff98de19ad9815:2025-CVPR-FUME/main.py",
+    "original_sha256": "d5ad98c2289460aeddc250fcd594684b72daa98eacaf7ce890a918dc1f189409",
+    "published_sha256": "d5ad98c2289460aeddc250fcd594684b72daa98eacaf7ce890a918dc1f189409",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "upstream/model.py",
+    "source": "siyuancncd/FUME@5dd7a306aa505d8f60265b0353ff98de19ad9815:2025-CVPR-FUME/model.py",
+    "original_sha256": "06fb98d0d19a4f217b95ce0bbb38d787c37d8d1bab424898dcf983eaa2b3a9a2",
+    "published_sha256": "06fb98d0d19a4f217b95ce0bbb38d787c37d8d1bab424898dcf983eaa2b3a9a2",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "upstream/options.py",
+    "source": "siyuancncd/FUME@5dd7a306aa505d8f60265b0353ff98de19ad9815:2025-CVPR-FUME/options.py",
+    "original_sha256": "d254290b72064ba7f6358257a051d204c0bec6e6e4e1f6a9ed9909b53f5b8722",
+    "published_sha256": "d254290b72064ba7f6358257a051d204c0bec6e6e4e1f6a9ed9909b53f5b8722",
+    "change": "byte-identical"
+  },
+  {
+    "published_file": "upstream/processor.py",
+    "source": "siyuancncd/FUME@5dd7a306aa505d8f60265b0353ff98de19ad9815:2025-CVPR-FUME/processor.py",
+    "original_sha256": "8761787020f455caba7a21bd47db2352c04b046a5da937b9f39e2b39ea202176",
+    "published_sha256": "8761787020f455caba7a21bd47db2352c04b046a5da937b9f39e2b39ea202176",
+    "change": "byte-identical"
+  }
+]

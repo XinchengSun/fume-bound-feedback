@@ -1,0 +1,82 @@
+{
+  "evidence": {
+    "uses": {
+      "file": "records/20261110/provenance.json",
+      "sha256": "e40e547562964fee536f60f2e3d2f8da0fd5f1547d1b7e80b26191e9d950466e"
+    },
+    "indices": {
+      "file": "records/20261110/historical_fit_indices.csv",
+      "sha256": "994f17c92b9728759eb05877b867de7aa5e7c100139a87521195aa6e0e909536"
+    }
+  },
+  "ranges": [
+    {
+      "split": "train_loader",
+      "count": 8000,
+      "fields": {
+        "candidate": true,
+        "modality": "image_text",
+        "uses": [
+          {
+            "role": "encoder_fit",
+            "ref": "uses"
+          }
+        ]
+      }
+    },
+    {
+      "split": "valid",
+      "count": 1000,
+      "fields": {
+        "candidate": true,
+        "modality": "image_text",
+        "uses": [
+          {
+            "role": "epoch_selection",
+            "ref": "uses"
+          },
+          {
+            "role": "hyperparameter_selection",
+            "ref": "uses"
+          }
+        ]
+      }
+    },
+    {
+      "split": "test",
+      "count": 1000,
+      "fields": {
+        "candidate": true,
+        "modality": "image_text",
+        "uses": [
+          {
+            "role": "test_query",
+            "ref": "uses"
+          },
+          {
+            "role": "gallery",
+            "ref": "uses"
+          },
+          {
+            "role": "method_selection",
+            "ref": "uses"
+          }
+        ]
+      }
+    }
+  ],
+  "indexed_uses": [
+    {
+      "split": "train_loader",
+      "index_ref": "indices",
+      "columns": [
+        "image_loader_row",
+        "text_loader_row"
+      ],
+      "use": {
+        "role": "head_fit",
+        "ref": "uses"
+      }
+    }
+  ]
+}

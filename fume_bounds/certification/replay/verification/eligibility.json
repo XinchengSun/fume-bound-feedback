@@ -1,0 +1,23 @@
+{
+  "candidate_rows": {
+    "eligible": 0,
+    "ineligible": 10000,
+    "unknown": 0
+  },
+  "eligible_source_blocks": 0,
+  "reason_counts": {
+    "population_review": 10000,
+    "prospective_isolation": 10000,
+    "encoder_fit": 8000,
+    "history_review": 10000,
+    "observation_unit_review": 10000,
+    "identity_or_source_missing": 10000,
+    "identity_review": 10000,
+    "head_fit": 2048,
+    "epoch_selection": 1000,
+    "hyperparameter_selection": 1000,
+    "test_query": 1000,
+    "gallery": 1000,
+    "method_selection": 1000
+  }
+}

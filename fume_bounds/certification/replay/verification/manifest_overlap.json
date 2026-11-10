@@ -1,0 +1,129 @@
+{
+  "fields": [
+    "classes",
+    "classes_emb",
+    "test_imgs_deep",
+    "test_imgs_labels",
+    "test_texts",
+    "test_texts_labels",
+    "train_imgs_deep",
+    "train_imgs_labels",
+    "train_texts",
+    "train_texts_labels",
+    "valid_imgs_deep",
+    "valid_imgs_labels",
+    "valid_texts",
+    "valid_texts_labels"
+  ],
+  "attributes": {
+    "file": [],
+    "classes": [],
+    "classes_emb": [],
+    "test_imgs_deep": [],
+    "test_imgs_labels": [],
+    "test_texts": [],
+    "test_texts_labels": [],
+    "train_imgs_deep": [],
+    "train_imgs_labels": [],
+    "train_texts": [],
+    "train_texts_labels": [],
+    "valid_imgs_deep": [],
+    "valid_imgs_labels": [],
+    "valid_texts": [],
+    "valid_texts_labels": []
+  },
+  "label_counts": {
+    "train": {
+      "0": 800,
+      "1": 800,
+      "2": 800,
+      "3": 800,
+      "4": 800,
+      "5": 800,
+      "6": 800,
+      "7": 800,
+      "8": 800,
+      "9": 800
+    },
+    "valid": {
+      "0": 100,
+      "1": 100,
+      "2": 100,
+      "3": 100,
+      "4": 100,
+      "5": 100,
+      "6": 100,
+      "7": 100,
+      "8": 100,
+      "9": 100
+    },
+    "test": {
+      "0": 100,
+      "1": 100,
+      "2": 100,
+      "3": 100,
+      "4": 100,
+      "5": 100,
+      "6": 100,
+      "7": 100,
+      "8": 100,
+      "9": 100
+    }
+  },
+  "exact_feature_hash_audit": {
+    "imgs_deep": {
+      "within_split_repeated_rows_beyond_first": {
+        "train": 0,
+        "valid": 0,
+        "test": 0
+      },
+      "between_split_shared_unique_vectors": {
+        "train__valid": 0,
+        "train__test": 0,
+        "valid__test": 0
+      }
+    },
+    "texts": {
+      "within_split_repeated_rows_beyond_first": {
+        "train": 0,
+        "valid": 0,
+        "test": 0
+      },
+      "between_split_shared_unique_vectors": {
+        "train__valid": 0,
+        "train__test": 0,
+        "valid__test": 0
+      }
+    }
+  },
+  "alias_verification": "unknown; no canonical source IDs",
+  "row_role_intersections": {
+    "historical_head_fit_and_encoder_fit": 2048,
+    "test_queries_and_gallery": 1000
+  },
+  "eligibility": {
+    "candidate_rows": {
+      "eligible": 0,
+      "ineligible": 10000,
+      "unknown": 0
+    },
+    "eligible_source_blocks": 0,
+    "reason_counts": {
+      "history_review": 10000,
+      "population_review": 10000,
+      "identity_or_source_missing": 10000,
+      "encoder_fit": 8000,
+      "prospective_isolation": 10000,
+      "observation_unit_review": 10000,
+      "identity_review": 10000,
+      "head_fit": 2048,
+      "epoch_selection": 1000,
+      "hyperparameter_selection": 1000,
+      "gallery": 1000,
+      "method_selection": 1000,
+      "test_query": 1000
+    }
+  },
+  "eligible_cert_rows": 0,
+  "historical_manifest_sha256": "026ba78d32be3b7e7a286d5b24352269643c1d697ee43f789efb9293bc302196"
+}

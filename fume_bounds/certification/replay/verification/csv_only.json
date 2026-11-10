@@ -1,0 +1,10 @@
+{
+  "averages": {
+    "rows": 24,
+    "max_absolute_difference": 0.0
+  },
+  "paired": {
+    "rows": 140,
+    "max_absolute_difference": 0.0
+  }
+}

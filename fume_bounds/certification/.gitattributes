@@ -1,0 +1,3 @@
+# Byte-level provenance checks must survive checkout on Windows and Linux.
+records/20261110/** -text
+replay/sources/** -text

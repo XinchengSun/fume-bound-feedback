@@ -1,0 +1,33 @@
+{
+  "source_buffers": [],
+  "observed_step_starts": 88,
+  "python": "3.12.12",
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.17.1",
+    "pandas": "3.0.5",
+    "torch": "2.8.0+cu128",
+    "h5py": "3.16.0"
+  },
+  "batch_indices_match": true,
+  "inputs": {
+    "checkpoint": "01eacabdde0e8f9ee88e506bb1c763a4a55e0e3210f6b904bd19fba6f67da290",
+    "dataset": "338d710bd99bdfca28075d87ea0bf5875cdae83cd4b0c5bb931d390ce3c6091b"
+  },
+  "raw": {
+    "rows": 178,
+    "max_absolute_difference": 0.0
+  },
+  "gradients": {
+    "rows": 16,
+    "max_absolute_difference": 0.0
+  },
+  "averages": {
+    "rows": 24,
+    "max_absolute_difference": 0.0
+  },
+  "paired": {
+    "rows": 140,
+    "max_absolute_difference": 0.0
+  }
+}

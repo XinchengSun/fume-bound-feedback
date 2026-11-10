@@ -1,0 +1,38 @@
+{
+  "commit": "5dd7a306aa505d8f60265b0353ff98de19ad9815",
+  "seed": 2,
+  "epochs": 100,
+  "config": {
+    "dataset_name": "nus_deep",
+    "class_number": 10,
+    "input_dim_I": 4096,
+    "input_dim_T": 300,
+    "threshold": 0.5,
+    "batch_size": 300,
+    "alpha": 0.5,
+    "lr": 5e-05,
+    "layer_num": 4
+  },
+  "selected_epoch": 6,
+  "sizes": {
+    "train": 8000,
+    "val": 1000,
+    "test": 1000
+  },
+  "val": {
+    "i2t": 0.5970414565753133,
+    "t2i": 0.604646963773752,
+    "mean": 0.6008442101745326
+  },
+  "test": {
+    "i2t": 0.5865537296694495,
+    "t2i": 0.5916400411058267,
+    "mean": 0.5890968853876382
+  },
+  "test_threshold_0.5": {
+    "i2t": 0.7468456696903297,
+    "t2i": 0.7948852631771437,
+    "mean": 0.7708654664337367
+  },
+  "replay_agrees": true
+}

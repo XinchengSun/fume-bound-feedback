@@ -1,0 +1,32 @@
+--- upstream/main.py
++++ run/main.py
+@@ -17,7 +17,7 @@
+ if __name__ == '__main__':
+ 
+     set_seed(2)
+-    datasetName = 'pascal' # 'pascal', 'wiki', 'nus_deep', 'INRIA', 'xmedianet_deep'
++    datasetName = 'nus_deep' # 'pascal', 'wiki', 'nus_deep', 'INRIA', 'xmedianet_deep'
+ 
+     # Construct folder
+     cur_time = time.strftime("%Y%m%d_%H%M%S", time.localtime())
+--- upstream/processor.py
++++ run/processor.py
+@@ -151,6 +151,9 @@
+ 
+                 print('{}ing  Loss: {:.4f} mAP@all ==> Img2Txt: {:.4f}  Txt2Img: {:.4f}, Aver: {:.4f}'.format(phase, epoch_loss, img2text, txt2img, (img2text+txt2img)/2 ))
+ 
++                from audit_io import log_metric
++                log_metric(epoch+1, phase, epoch_loss, img2text, txt2img)
++
+                 if phase == 'test' and save_flag == True:
+                     results['corresponding_test_I2T_mAP'] = img2text 
+                     results['corresponding_test_T2I_mAP'] = txt2img 
+@@ -180,6 +183,8 @@
+             if phase == 'val' and (img2text + txt2img) / 2. > results['best_val_Aver_mAP']:
+                 results['best_val_Aver_mAP'] = (img2text + txt2img) / 2.
+                 save_flag = True
++                from audit_io import save_checkpoint
++                save_checkpoint(epoch+1, model, results['best_val_Aver_mAP'])
+ 
+         if np.isnan(epoch_loss):
+             print("loss is nan!")    
