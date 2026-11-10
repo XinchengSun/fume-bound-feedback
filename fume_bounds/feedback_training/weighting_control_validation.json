@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-10",
+  "base_commit": "4c7f97fa657f7e3240b64e10e932758426602b32",
+  "completed_previous_real_run": {
+    "arms": 4,
+    "order_seeds": 3,
+    "total_updates": 1620,
+    "status": "completed",
+    "source": "records/20261110_nus/status.json"
+  },
+  "new_real_weighting_control": {
+    "status": "not_run",
+    "runs_started": 0,
+    "planned_runs": 6,
+    "planned_updates": 810,
+    "new_retrieval_metrics": null,
+    "execution_probe": "ssh: Could not resolve hostname sunxc-v1: Temporary failure in name resolution",
+    "scope": "Current execution environment has no accessible registered server endpoint or mounted real features; this does not describe server health."
+  },
+  "unit_tests": {
+    "passed": 20,
+    "failed": 0,
+    "command": "python -m unittest discover -s fume_bounds/tests -p 'test_feedback*.py' -v",
+    "log": "verification/train_prior_tests.log"
+  },
+  "legacy_summary": {
+    "per_seed_rows": 504,
+    "all_fields_exactly_equal": true,
+    "original_source_commit": "4c7f97fa657f7e3240b64e10e932758426602b32"
+  },
+  "synthetic_integration": {
+    "source_kind": "synthetic",
+    "real_training_completed": false,
+    "status": "completed",
+    "total_updates": 48,
+    "arms": [
+      "predictive_mean",
+      "full"
+    ],
+    "epochs": 2,
+    "order_seeds": [
+      110104,
+      110105
+    ],
+    "training_positive_prior": 0.25,
+    "gradient_diagnostic_rows": 8,
+    "other_rows_diagnostic_fields_empty": true,
+    "protocol_sha256": "b4f4079b5bff20cf1d6de6af5cdc5636e31429fbb9198c3a965ce8fef4a08102",
+    "scope": "Code and data-flow verification only; not a new NUS result."
+  },
+  "tested_sha256": {
+    "fume_bounds/feedback_training/engine.py": "6bb644dd347590aa207d265cd6452057602a0d85d6a463f5b49c47ea0c2226b6",
+    "fume_bounds/feedback_training/run.py": "dd5cd121ef4de6ed9cf1849899ac2a74b9848ad657bf26a3bdaf12380508c69b",
+    "fume_bounds/feedback_training/summarize.py": "3fdabf1d72113da74366a17ca4fdb6cdd7b5097a8b6a907bb79d6a28705b4d82",
+    "fume_bounds/feedback_training/compare_weighting.py": "d0f9150182a3988026864c911598ef87b16c8ccb53d18a8f723db85299b10f1d",
+    "fume_bounds/tests/test_feedback_training_weighting.py": "0c04aa7284af9e11592fcde8213a2ffe59d22d27090c8555c0c768b1697e3884",
+    "fume_bounds/tests/test_feedback_weighting_comparison.py": "9906557e5f573905dc8da468f4095391005decb77bcf4d47697f4bd35689f08b"
+  }
+}

@@ -24,6 +24,8 @@ HERE = Path(__file__).resolve().parent
 REPLAY = HERE.parent / "certification/replay"
 SRC = REPLAY / "sources"
 RECORD = REPLAY.parent / "records/20261110"
+LEGACY_EXTRACTION_SHA256 = "b40924da7a6d75030bfcc5092e1d590c1a51f3d5b49dcaa96e3899124aca766a"
+LEGACY_FEATURES_SHA256 = "f99ee36b2df15171a14764ae90972a35768f86f16bd8b9becec09c90d7edaabe"
 
 
 def digest(path):
@@ -119,6 +121,15 @@ def prepare(checkpoint, dataset, out):
     return feature
 
 
+def extraction_source_allowed(meta):
+    """Accept current extraction or the exact published historical source/cache pair."""
+    current = meta.get("extraction_script_sha256") == digest(HERE / "run.py")
+    historical = (meta.get("extraction_script_sha256") == LEGACY_EXTRACTION_SHA256
+                  and meta.get("features_sha256") == LEGACY_FEATURES_SHA256)
+    return ((current or historical)
+            and meta.get("archived_extraction_reference_sha256") == digest(SRC / "extract.py"))
+
+
 def load_features(feature):
     meta = json.loads((feature.parent / "feature_manifest.json").read_text())
     if meta["source_kind"] != "real":
@@ -129,8 +140,7 @@ def load_features(feature):
             raise ValueError("Feature provenance does not match the registered NUS checkpoint/data")
     if meta.get("features_sha256") != digest(feature) or meta.get("epoch") != 6:
         raise ValueError("Feature hash/epoch mismatch")
-    if (meta.get("extraction_script_sha256") != digest(HERE / "run.py")
-            or meta.get("archived_extraction_reference_sha256") != digest(SRC / "extract.py")):
+    if not extraction_source_allowed(meta):
         raise ValueError("Feature extraction source mismatch")
     pack = torch.load(feature, map_location="cpu", weights_only=True)
     validate_pack(pack, real=True)
@@ -169,9 +179,24 @@ def train_run(pack, metadata, args, out):
     validate_pack(pack, real=not synthetic)
     out.mkdir(parents=True, exist_ok=True)
     source_check()
+    arms = tuple(getattr(args, "arms", ARMS))
+    weighting = getattr(args, "feedback_weighting", "balanced")
+    previous_run = getattr(args, "previous_run", None)
+    if len(arms) < 2 or len(set(arms)) != len(arms) or any(a not in ARMS for a in arms):
+        raise ValueError("Paired training requires at least two unique registered arms")
+    if previous_run and synthetic:
+        raise ValueError("--previous-run is restricted to verified real inputs")
+    support = support_ids(len(pack["train"][2]), synthetic)
+    experiment = Experiment(pack, support, feedback_weighting=weighting)
+    initial = [pack[k].detach().clone() for k in ("wI", "wT")]
+    schedules = {seed: make_batches(len(pack["train"][2]), args.batch_size, args.epochs, seed)
+                 for seed in args.seeds}
     config = dict(epochs=args.epochs, batch_size=args.batch_size, lr=args.lr,
                   feedback_weight=args.feedback_weight, adam_betas=[.5, .999], alpha=.5,
-                  contrastive_temperature=1.0, arms=list(ARMS), threads=args.threads,
+                  contrastive_temperature=1.0, arms=list(arms), threads=args.threads,
+                  feedback_weighting=weighting, training_positive_prior=experiment.training_positive_prior,
+                  feedback_positive_weight=experiment.positive_weight,
+                  gradient_diagnostic_frequency="first batch of each epoch; extra autograd calls, no gradient modification",
                   support_seed=41531, support_pairs=40 if synthetic else 1024,
                   training_rows=len(pack["train"][2]), support_rows_also_train=True,
                   posterior="Laplace logistic; independent N(0,4) prior; 24-point GH",
@@ -184,6 +209,14 @@ def train_run(pack, metadata, args, out):
                     code_sha256={p.name: digest(p) for p in (HERE / "engine.py", HERE / "run.py")},
                     versions={p: importlib.metadata.version(p) for p in ("torch", "numpy", "scipy")},
                     statistical_scope="empirical feedback pilot; no independent probability certification")
+    if previous_run:
+        if __package__:
+            from .compare_weighting import check_previous
+        else:
+            from compare_weighting import check_previous
+        initial_hashes = [hashlib.sha256(w.numpy().tobytes()).hexdigest() for w in initial]
+        manifest["previous_run_control"] = check_previous(previous_run, manifest, support, schedules, initial_hashes)
+        manifest["code_sha256"]["compare_weighting.py"] = digest(HERE / "compare_weighting.py")
     manifest["protocol_sha256"] = hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest()
     write_json(out / "run_manifest.json", manifest)
     write_json(out / "status.json", dict(status="running", source_kind=metadata["source_kind"],
@@ -192,10 +225,7 @@ def train_run(pack, metadata, args, out):
     torch.manual_seed(41531)
     np.random.seed(41531)
     random.seed(41531)
-    support = support_ids(len(pack["train"][2]), synthetic)
     write_json(out / "support.json", support.tolist())
-    experiment = Experiment(pack, support)
-    initial = [pack[k].detach().clone() for k in ("wI", "wT")]
     base_val = experiment.evaluate(*initial, "val")
     if not synthetic:
         expected = json.loads((SRC / "official_result.json").read_text())["val"]
@@ -205,9 +235,9 @@ def train_run(pack, metadata, args, out):
     selected = []
     starts = []
     for seed in args.seeds:
-        schedule = make_batches(len(pack["train"][2]), args.batch_size, args.epochs, seed)
+        schedule = schedules[seed]
         write_json(out / f"batches_{seed}.json", [[b.tolist() for b in ep] for ep in schedule])
-        for arm in ARMS:
+        for arm in arms:
             torch.manual_seed(41531)
             np.random.seed(41531)
             random.seed(41531)
@@ -231,7 +261,8 @@ def train_run(pack, metadata, args, out):
             for epoch, batches in enumerate(schedule, 1):
                 for batch_no, ids in enumerate(batches):
                     optimizer.zero_grad(set_to_none=True)
-                    loss, stats = experiment.loss(*weights, ids, arm, args.feedback_weight)
+                    loss, stats = experiment.loss(*weights, ids, arm, args.feedback_weight,
+                                                  diagnostics=(batch_no == 0))
                     loss.backward()
                     if any(w.grad is None or not torch.isfinite(w.grad).all() for w in weights):
                         raise FloatingPointError("Missing/nonfinite gradient; no update applied")
@@ -281,6 +312,12 @@ def train_run(pack, metadata, args, out):
                real_training_completed=not synthetic, synthetic_training_completed=synthetic,
                training_started=True, test_evaluated=True, training_steps_per_arm=sum(map(len, schedule)),
                seconds=time.monotonic()-started, protocol_sha256=manifest["protocol_sha256"]))
+    if previous_run:
+        if __package__:
+            from .compare_weighting import compare_runs
+        else:
+            from compare_weighting import compare_runs
+        compare_runs(previous_run, out, out / "weighting_comparison")
 
 
 def synthetic_pack():
@@ -308,6 +345,9 @@ def main():
             sub.add_argument("--dataset", required=True, type=Path)
         if name == "train":
             sub.add_argument("--features", required=True, type=Path)
+        if name in ("train", "all"):
+            sub.add_argument("--previous-run", type=Path,
+                             help="Completed balanced run to validate before training and compare afterwards")
         if name != "prepare":
             sub.add_argument("--epochs", type=int, default=2 if name == "smoke" else 5)
             sub.add_argument("--batch-size", type=int, default=16 if name == "smoke" else 300)
@@ -315,13 +355,16 @@ def main():
             sub.add_argument("--lr", type=float, default=5e-5)
             sub.add_argument("--feedback-weight", type=float, default=1.0)
             sub.add_argument("--threads", type=int, default=3)
+            sub.add_argument("--arms", nargs="+", choices=ARMS, default=list(ARMS))
+            sub.add_argument("--feedback-weighting", choices=("balanced", "train_prior"), default="balanced")
     args = parser.parse_args()
     args.out = args.out.resolve()
     if args.out.exists():
         parser.error("Output directory already exists; refusing to overwrite it")
     if args.mode != "prepare" and (args.epochs < 1 or args.batch_size < 2 or args.lr <= 0
                                    or args.feedback_weight < 0 or args.threads < 1
-                                   or len(set(args.seeds)) != len(args.seeds)):
+                                   or len(set(args.seeds)) != len(args.seeds)
+                                   or len(set(args.arms)) != len(args.arms) or len(args.arms) < 2):
         parser.error("Invalid training configuration")
     args.out.mkdir(parents=True)
     try:

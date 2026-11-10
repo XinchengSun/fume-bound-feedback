@@ -16,9 +16,12 @@ CONTRASTS = (
     ("stop_sd", "original"), ("full", "original"),
 )
 REQUIRED_METRICS = ("i2t", "t2i", "map", "brier", "nll", "ece")
-OPTIONAL_METRICS = ("pos_L", "neg_L", "AU", "EU", "event_loss", "lower", "upper", "width")
+OPTIONAL_METRICS = ("pos_L", "neg_L", "AU", "EU", "event_loss", "lower", "upper", "width",
+                    "pos_brier", "neg_brier", "pos_nll", "neg_nll", "pos_mean_q", "neg_mean_q",
+                    "train_prior_event_loss")
 HIGHER = {"i2t", "t2i", "map"}
-LOWER = {"brier", "nll", "ece", "event_loss"}
+LOWER = {"brier", "nll", "ece", "event_loss", "pos_brier", "neg_brier", "pos_nll", "neg_nll",
+         "train_prior_event_loss"}
 
 
 def integer(value, field):
@@ -44,6 +47,10 @@ def load_results(run_dir):
     seeds = [integer(s, "order seed") for s in manifest.get("order_seeds", [])]
     if not seeds or len(seeds) != len(set(seeds)):
         raise ValueError("Manifest order_seeds must be nonempty and unique")
+    arms = manifest.get("config", {}).get("arms", list(ARMS))
+    if (not isinstance(arms, list) or len(arms) < 2 or len(set(arms)) != len(arms)
+            or any(a not in ARMS for a in arms)):
+        raise ValueError("Manifest arms must be a unique registered subset with at least two arms")
     with (run_dir / "final.csv").open(newline="", encoding="utf-8") as stream:
         reader = csv.DictReader(stream)
         fields = set(reader.fieldnames or [])
@@ -65,7 +72,7 @@ def load_results(run_dir):
         row["epoch"] = integer(row["epoch"], "epoch")
         if row["seed"] not in seeds:
             raise ValueError("CSV seed is not in manifest order_seeds")
-        if row["arm"] not in ARMS or row["selection"] not in (*SELECTIONS, "epoch0"):
+        if row["arm"] not in arms or row["selection"] not in (*SELECTIONS, "epoch0"):
             raise ValueError("Unknown arm or endpoint selection")
         if row["split"] != "test":
             raise ValueError("final.csv must contain test endpoints only; no epoch selection is performed here")
@@ -83,10 +90,11 @@ def load_results(run_dir):
                 raise ValueError(f"Invalid metric {metric}") from exc
             if not math.isfinite(row[metric]):
                 raise ValueError(f"Non-finite metric {metric}")
-            if metric in HIGHER | {"brier", "ece", "pos_L", "neg_L", "lower", "upper", "width"}:
+            if metric in HIGHER | {"brier", "ece", "pos_L", "neg_L", "lower", "upper", "width",
+                                  "pos_brier", "neg_brier", "pos_mean_q", "neg_mean_q"}:
                 if not 0 <= row[metric] <= 1:
                     raise ValueError(f"{metric} must be stored in [0, 1], not percent")
-            if metric in {"nll", "event_loss"} and row[metric] < 0:
+            if metric in LOWER and row[metric] < 0:
                 raise ValueError(f"Negative {metric}")
         if not math.isclose(row["map"], (row["i2t"] + row["t2i"]) / 2, rel_tol=0, abs_tol=1e-10):
             raise ValueError("map must equal the mean of i2t and t2i")
@@ -103,7 +111,7 @@ def load_results(run_dir):
     if not set(SELECTIONS) <= selections:
         raise ValueError("Both final and val_best endpoints are required")
     for selection in selections:
-        required_keys = {(s, a, selection) for s in seeds for a in ARMS}
+        required_keys = {(s, a, selection) for s in seeds for a in arms}
         actual_keys = {key for key in indexed if key[2] == selection}
         if required_keys != actual_keys:
             raise ValueError(f"Unpaired or missing seed/arm endpoints for {selection}: {sorted(required_keys - actual_keys)}")
@@ -117,9 +125,12 @@ def load_results(run_dir):
 
 def summarize_run(run_dir, out_dir=None):
     manifest, seeds, metrics, indexed = load_results(run_dir)
+    arms = manifest.get("config", {}).get("arms", list(ARMS))
     per_seed, aggregates = [], []
     for selection in SELECTIONS:
         for left, right in CONTRASTS:
+            if left not in arms or right not in arms:
+                continue
             for metric in metrics:
                 factor = 100.0 if metric in HIGHER else 1.0
                 direction = "higher" if metric in HIGHER else "lower" if metric in LOWER else "descriptive"
@@ -152,6 +163,8 @@ def summarize_run(run_dir, out_dir=None):
     summary = dict(
         title="SYNTHETIC INTEGRATION TEST — NOT NUS PERFORMANCE" if synthetic else "NUS empirical multistep feedback experiment",
         source_kind=manifest["source_kind"], synthetic=synthetic,
+        arms=arms, feedback_weighting=manifest.get("config", {}).get("feedback_weighting", "balanced"),
+        training_positive_prior=manifest.get("config", {}).get("training_positive_prior", "not_recorded"),
         primary_selection="final", secondary_selection="val_best",
         selection_rule="Read already selected endpoint labels; never choose an epoch using test metrics.",
         replication_unit="minibatch order seed; not independent encoder initializations, support libraries, or datasets",

@@ -1,6 +1,6 @@
 # NUS 连续下界反馈训练
 
-**真实运行已完成。** 12 组测试指标、固定终点与验证选轮对比、原始曲线及复跑核验见 [NUS 实测记录](records/20261110_nus/README.md)。
+**12 组真实训练已完成。** 当前均衡完整下界组的固定终点 mAP 与概率评分均差于均值监督。测试指标、验证选轮对比、原始曲线及复跑核验见 [NUS 实测记录](records/20261110_nus/README.md)；新增干预见 [负结果复核与一次六组权重对照](WEIGHTING_CONTROL.md)。
 
 本阶段回答一个经验问题：在同一第 6 轮检查点上连续更新时，完整下界反馈是否比后验均值监督和停止标准差梯度带来更好的检索结果。独立概率认证继续按 P0a 管理；缺少认证池不阻止本阶段训练，但实验不产生逐对 95% 覆盖保证。
 
@@ -82,7 +82,7 @@ Brier、NLL 和十箱 ECE 在测试全自然配对上计算，越小越好。正
 
 ```bash
 python fume_bounds/feedback_training/run.py smoke --out /absolute/path/to/new_smoke_run
-python -m unittest discover -s fume_bounds/tests -p 'test_feedback_training_*.py' -v
+python -m unittest discover -s fume_bounds/tests -p 'test_feedback*.py' -v
 ```
 
-smoke 只验证多步优化、各组隔离、保存和汇总链路，不能用其 mAP 作为 NUS 实验结果。本目录 [validation.json](validation.json) 记录本次实际验证及真实执行入口的状态。
+smoke 只验证多步优化、各组隔离、保存和汇总链路，不能用其 mAP 作为 NUS 实验结果。[validation.json](validation.json) 保留 1bbd4bc 实现阶段的历史验证；真实 12 组结果见 [实测归档](records/20261110_nus/README.md)，新增权重对照的状态见 [weighting_control_validation.json](weighting_control_validation.json)。
