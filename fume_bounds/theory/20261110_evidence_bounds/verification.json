@@ -1,0 +1,353 @@
+{
+  "status": "passed",
+  "purpose": "pure_mathematical_verification",
+  "real_training_completed": false,
+  "real_dataset_used": false,
+  "proofs_established_by_numerics": false,
+  "seed": 20261110,
+  "executed_at_utc": "2026-11-10T11:45:44.300536+00:00",
+  "code_sha256": "517c660c8815f41e9e3ada9bd377cecdf2444cb4d7519ef6d29a8a078db31e2c",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "checks": {
+    "information_radius": {
+      "status": "passed",
+      "interval_count": 259,
+      "degenerate_count": 16,
+      "nondegenerate_count": 243,
+      "max_absolute_errors": {
+        "kl_balance": 1.915134717478395e-15,
+        "mixture_optimization": 2.5448307886609648e-14,
+        "endpoint_equalization": 2.1094237467877974e-15,
+        "mixture_identity": 1.1102230246251565e-16
+      },
+      "smallest_computed_value": 0.0,
+      "max_nested_increase": 0.0,
+      "max_supported_posterior_excess": -2.220446049250313e-16,
+      "max_linear_width_bound_excess": 0.0,
+      "tolerance": 2e-10,
+      "examples": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "radius_nats": 0.6931471805599453,
+          "minimax_center": 0.5,
+          "upper_endpoint_weight": 0.5
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.8,
+          "radius_nats": 0.19274475702175742,
+          "minimax_center": 0.5,
+          "upper_endpoint_weight": 0.4999999999999999
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "radius_nats": 0.020135513550688766,
+          "minimax_center": 0.5,
+          "upper_endpoint_weight": 0.5
+        },
+        {
+          "lower": 0.45,
+          "upper": 0.55,
+          "radius_nats": 0.00500836684635686,
+          "minimax_center": 0.5,
+          "upper_endpoint_weight": 0.4999999999999997
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "radius_nats": 0.009988333284034492,
+          "minimax_center": 0.8523552691216403,
+          "upper_endpoint_weight": 0.5235526912164025
+        },
+        {
+          "lower": 0,
+          "upper": 0.1,
+          "radius_nats": 0.0380104126696572,
+          "minimax_center": 0.03729708346843839,
+          "upper_endpoint_weight": 0.37297083468438386
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.5,
+          "radius_nats": 0.0,
+          "minimax_center": 0.5,
+          "upper_endpoint_weight": 0.0
+        }
+      ]
+    },
+    "beta_eu_supermartingale": {
+      "status": "passed",
+      "posterior_count": 100,
+      "realized_updates_checked": 200,
+      "max_identity_error": 2.330939803153742e-15,
+      "max_expected_increase": -1.0864098215153861e-05,
+      "realized_increase_count": 50,
+      "example_realized_increase": {
+        "alpha": 0.1,
+        "beta": 2,
+        "observation": 1,
+        "observation_predictive_probability": 0.047619047619047616,
+        "eu_before": 0.08858105430446916,
+        "eu_after": 0.13384427205308302,
+        "increase": 0.04526321774861386,
+        "expected_eu_after": 0.06382782895301158,
+        "future_label_mutual_information": 0.024753225351457527
+      },
+      "expectation_law": "Current Beta posterior predictive, not every fixed-parameter sampling law",
+      "tolerance": 2e-10
+    },
+    "correlated_relevance": {
+      "status": "passed",
+      "outcome_count": 2,
+      "orders_checked": 4,
+      "joint_outcomes": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "joint_masses": [
+        0.6,
+        0.4
+      ],
+      "marginal_relevance": [
+        0.6,
+        0.4,
+        0.6
+      ],
+      "expected_ap": {
+        "ABC": 0.7,
+        "BAC": 0.75,
+        "ACB": 0.7333333333333333,
+        "CAB": 0.7333333333333333
+      },
+      "max_absolute_error": 0.0,
+      "note": "ABC is not a full marginal-descending order; ACB and CAB are, and both remain worse than BAC."
+    },
+    "simplex_box_same_parameter_difference": {
+      "status": "passed",
+      "random_boxes": 220,
+      "edge_boxes": 3,
+      "min_class_count": 2,
+      "max_class_count": 16,
+      "max_objective_error": 2.220446049250313e-16,
+      "max_mass_error": 2.220446049250313e-16,
+      "two_item_gallery": {
+        "gallery_classes": [
+          0,
+          1
+        ],
+        "old_order": [
+          1,
+          0
+        ],
+        "new_order": [
+          0,
+          1
+        ],
+        "per_class_ap_difference": [
+          0.5,
+          -0.5
+        ],
+        "examples": [
+          {
+            "name": "wide",
+            "lower": [
+              0.4,
+              0.1
+            ],
+            "upper": [
+              0.9,
+              0.6
+            ],
+            "minimum_expected_ap_difference": -0.09999999999999998,
+            "attaining_probability": [
+              0.4,
+              0.6
+            ],
+            "certifies_positive_difference": false
+          },
+          {
+            "name": "narrow",
+            "lower": [
+              0.7,
+              0.1
+            ],
+            "upper": [
+              0.9,
+              0.3
+            ],
+            "minimum_expected_ap_difference": 0.20000000000000004,
+            "attaining_probability": [
+              0.7000000000000001,
+              0.3
+            ],
+            "certifies_positive_difference": true
+          }
+        ]
+      },
+      "tolerance": 2e-10
+    },
+    "ap_inversion_bound": {
+      "status": "passed",
+      "maximum_gallery_size": 8,
+      "binary_rankings_checked": 502,
+      "empty_positive_rankings_excluded": 8,
+      "max_ap_identity_error": 2.220446049250313e-16,
+      "max_bound_violation": 1.1102230246251565e-16,
+      "bound": "1 - AP <= K / (M + K)",
+      "tolerance": 2e-10
+    },
+    "scalar_mixture_confidence_sequence": {
+      "status": "passed",
+      "prior": "Beta(1,1) sequential predictive mixture",
+      "likelihood_ratio": "B(s+1,t-s+1) / (p**s * (1-p)**(t-s))",
+      "probability_grid": [
+        0.0,
+        0.001,
+        0.005,
+        0.01,
+        0.02,
+        0.03,
+        0.04,
+        0.05,
+        0.06,
+        0.07,
+        0.08,
+        0.09,
+        0.1,
+        0.11,
+        0.12,
+        0.13,
+        0.14,
+        0.15,
+        0.16,
+        0.17,
+        0.18,
+        0.19,
+        0.2,
+        0.21,
+        0.22,
+        0.23,
+        0.24,
+        0.25,
+        0.26,
+        0.27,
+        0.28,
+        0.29,
+        0.3,
+        0.31,
+        0.32,
+        0.33,
+        0.34,
+        0.35000000000000003,
+        0.36,
+        0.37,
+        0.38,
+        0.39,
+        0.4,
+        0.41000000000000003,
+        0.42,
+        0.43,
+        0.44,
+        0.45,
+        0.46,
+        0.47000000000000003,
+        0.48,
+        0.49,
+        0.5,
+        0.51,
+        0.52,
+        0.53,
+        0.54,
+        0.55,
+        0.56,
+        0.5700000000000001,
+        0.58,
+        0.59,
+        0.6,
+        0.61,
+        0.62,
+        0.63,
+        0.64,
+        0.65,
+        0.66,
+        0.67,
+        0.68,
+        0.6900000000000001,
+        0.7000000000000001,
+        0.71,
+        0.72,
+        0.73,
+        0.74,
+        0.75,
+        0.76,
+        0.77,
+        0.78,
+        0.79,
+        0.8,
+        0.81,
+        0.8200000000000001,
+        0.8300000000000001,
+        0.84,
+        0.85,
+        0.86,
+        0.87,
+        0.88,
+        0.89,
+        0.9,
+        0.91,
+        0.92,
+        0.93,
+        0.9400000000000001,
+        0.9500000000000001,
+        0.96,
+        0.97,
+        0.98,
+        0.99,
+        0.995,
+        0.999,
+        1.0
+      ],
+      "parameter_grid_count": 105,
+      "confidence_levels": 3,
+      "scenarios": 315,
+      "maximum_time": 128,
+      "max_mass_conservation_error": 7.438494264988549e-15,
+      "results": [
+        {
+          "delta": 0.01,
+          "maximum_crossing_probability": 0.005968470815593036,
+          "maximizing_grid_probability": 0.27,
+          "maximum_crossing_to_delta_ratio": 0.5968470815593035
+        },
+        {
+          "delta": 0.05,
+          "maximum_crossing_probability": 0.03266317326929992,
+          "maximizing_grid_probability": 0.48,
+          "maximum_crossing_to_delta_ratio": 0.6532634653859983
+        },
+        {
+          "delta": 0.1,
+          "maximum_crossing_probability": 0.0715889172315638,
+          "maximizing_grid_probability": 0.18,
+          "maximum_crossing_to_delta_ratio": 0.715889172315638
+        }
+      ],
+      "tolerance": 2e-10,
+      "scope": "Finite-grid, finite-horizon numerical audit; not a proof of Ville's inequality, not real-data certification."
+    }
+  }
+}
