@@ -1,0 +1,44 @@
+{
+  "ordinary_latest": {
+    "accepted": 288,
+    "expected_decreases": 34,
+    "realized_decreases": 40,
+    "min_accepted_expected_gain": -0.13032976915716488
+  },
+  "point_guard": {
+    "accepted": 256,
+    "expected_decreases": 0,
+    "realized_decreases": 5,
+    "min_accepted_expected_gain": 0.0003987293534466474
+  },
+  "certified_guard": {
+    "accepted": 218,
+    "expected_decreases": 0,
+    "realized_decreases": 1,
+    "min_accepted_expected_gain": 0.00733496539118339
+  },
+  "certified_minus_point_mean_expected_ap": {
+    "mean": -0.0009779339078364313,
+    "ci95": [
+      -0.0015607167313269445,
+      -0.0003951510843459182
+    ],
+    "world_wins": 0,
+    "world_losses": 18,
+    "world_ties": 14
+  },
+  "certified_minus_point_mean_realized_ap": {
+    "mean": -0.0005208375146247973,
+    "ci95": [
+      -0.001129452997879102,
+      8.777796862950737e-05
+    ],
+    "world_wins": 4,
+    "world_losses": 14,
+    "world_ties": 14
+  },
+  "max_certificate_minus_truth": -0.0013674699577131766,
+  "beneficial_candidates_not_certified_fraction": 0.2096128170894526,
+  "width_reduction": 0.702279911022818,
+  "radius_reduction": 0.8861169870833812
+}

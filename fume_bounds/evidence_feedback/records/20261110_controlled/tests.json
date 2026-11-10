@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "command": "python -m unittest discover -s fume_bounds/evidence_feedback/tests -v",
+  "exit_code": 0,
+  "executed_at_utc": "2026-11-10T12:59:39.392699+00:00",
+  "test_source_sha256": {
+    "tests/test_confidence.py": "f18684ca959dce4f90a1e88ea9ec4cdf3a588c7e1f0fd774fd87a706bfed4c68",
+    "tests/test_ranking.py": "85561486c5030b3da8f02fb6aae5d033ffbc14a600333d9249d20eab27019d43",
+    "tests/test_student.py": "895688dba67b5f16bb9b5ec5e0dc9db53d1b4649db8dadb78f8b7c3795d06d26"
+  },
+  "tests": 22,
+  "log": "tests.txt",
+  "real_nus_training": false
+}

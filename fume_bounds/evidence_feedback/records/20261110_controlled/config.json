@@ -1,0 +1,68 @@
+{
+  "acceptance_margin": 1e-10,
+  "ap_numerical_slack": 1e-12,
+  "batch_size": 64,
+  "candidate_rule": "same_continuous_training_path_snapshot_after_each_epoch",
+  "confidence_delta": 0.05,
+  "dgp_class_mean": [
+    1.0,
+    0.0
+  ],
+  "dgp_class_prior": 0.5,
+  "epochs_per_prefix": 3,
+  "evidence_unit": "one_new_entity_label_once",
+  "fume_alpha": 0.5,
+  "gallery_entities": 128,
+  "image_transform": [
+    [
+      1.0,
+      0.35
+    ],
+    [
+      -0.2,
+      1.1
+    ]
+  ],
+  "known_parameter_norm_bound": 4.0,
+  "learning_rate": 0.01,
+  "policies": [
+    "ordinary_latest",
+    "point_guard",
+    "certified_guard"
+  ],
+  "projection_outward_tolerance": 1e-08,
+  "protocol_version": "controlled_evidence_cosine_v1",
+  "queries": 64,
+  "query_weights": "uniform_fixed_all_queries",
+  "real_data_or_original_network": false,
+  "regularization": 1.0,
+  "scope": "synthetic_known_model_only",
+  "seed": 20261110,
+  "student_seeds": [
+    11,
+    23,
+    47
+  ],
+  "support_prefixes": [
+    128,
+    512,
+    2048
+  ],
+  "teacher_dimension": 3,
+  "text_transform": [
+    [
+      0.65,
+      -0.8
+    ],
+    [
+      0.85,
+      0.4
+    ]
+  ],
+  "tie_rule": "stable_gallery_input_order",
+  "truth_access": "evaluation_only_after_all_choices_for_each_world",
+  "warmup_entities": 128,
+  "warmup_epochs": 5,
+  "weight_decay": 0.0001,
+  "worlds": 32
+}

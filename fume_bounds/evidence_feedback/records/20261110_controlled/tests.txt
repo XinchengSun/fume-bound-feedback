@@ -1,0 +1,27 @@
+test_adversarial_prefix_can_certify_empty_and_blocks_reset (test_confidence.ConfidenceSequenceTests.test_adversarial_prefix_can_certify_empty_and_blocks_reset) ... ok
+test_any_nonnegative_multiplier_gives_global_witness_bound (test_confidence.ConfidenceSequenceTests.test_any_nonnegative_multiplier_gives_global_witness_bound) ... ok
+test_multidimensional_feasible_grid_is_inside_projection (test_confidence.ConfidenceSequenceTests.test_multidimensional_feasible_grid_is_inside_projection) ... ok
+test_prefix_mutation_repetition_and_ids (test_confidence.ConfidenceSequenceTests.test_prefix_mutation_repetition_and_ids) ... ok
+test_previous_outer_bound_survives_weaker_later_solver_bound (test_confidence.ConfidenceSequenceTests.test_previous_outer_bound_survives_weaker_later_solver_bound) ... ok
+test_scalar_projection_encloses_independent_exact_roots (test_confidence.ConfidenceSequenceTests.test_scalar_projection_encloses_independent_exact_roots) ... ok
+test_zero_queries_ball_and_invalid_inputs (test_confidence.ConfidenceSequenceTests.test_zero_queries_ball_and_invalid_inputs) ... ok
+test_closed_form_against_independent_mixture_optimization (test_ranking.InformationRadiusTests.test_closed_form_against_independent_mixture_optimization) ... ok
+test_nested_intervals_and_tiny_width (test_ranking.InformationRadiusTests.test_nested_intervals_and_tiny_width) ... ok
+test_radius_is_not_the_eu_of_every_supported_posterior (test_ranking.InformationRadiusTests.test_radius_is_not_the_eu_of_every_supported_posterior) ... ok
+test_radius_validation_and_endpoint_entropy (test_ranking.InformationRadiusTests.test_radius_validation_and_endpoint_entropy) ... ok
+test_actual_cosine_and_stable_ties (test_ranking.RankingTests.test_actual_cosine_and_stable_ties) ... ok
+test_fixed_weights_keep_all_queries_and_allow_negative_contribution (test_ranking.RankingTests.test_fixed_weights_keep_all_queries_and_allow_negative_contribution) ... ok
+test_input_errors_are_not_repaired (test_ranking.RankingTests.test_input_errors_are_not_repaired) ... ok
+test_point_mean_improvement_does_not_certify (test_ranking.RankingTests.test_point_mean_improvement_does_not_certify) ... ok
+test_random_boxes_against_independent_linear_program (test_ranking.RankingTests.test_random_boxes_against_independent_linear_program) ... ok
+test_shared_mechanism_not_difference_of_separate_extrema (test_ranking.RankingTests.test_shared_mechanism_not_difference_of_separate_extrema) ... ok
+test_two_item_exact_difference (test_ranking.RankingTests.test_two_item_exact_difference) ... ok
+test_unchanged_zero_and_tiny_positive_not_certified (test_ranking.RankingTests.test_unchanged_zero_and_tiny_positive_not_certified) ... ok
+test_every_entity_and_continuous_adam (test_student.StudentTests.test_every_entity_and_continuous_adam) ... ok
+test_gradient_by_central_difference (test_student.StudentTests.test_gradient_by_central_difference) ... ok
+test_loss_against_literal_archived_formula (test_student.StudentTests.test_loss_against_literal_archived_formula) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.776s
+
+OK

@@ -1,0 +1,565 @@
+{
+  "certificate_candidate_checks": 864,
+  "conditional_mathematical_check_failures": 0,
+  "confidence_interval_unit": "independent_world; average three paired initializations inside each world",
+  "controlled_student_training": true,
+  "final_paired_comparisons": {
+    "certified_guard_minus_ordinary_latest": {
+      "ci95": [
+        0.003513374815497884,
+        0.015716890422413553
+      ],
+      "independent_worlds": 32,
+      "mean": 0.009615132618955718
+    },
+    "point_guard_minus_ordinary_latest": {
+      "ci95": [
+        0.004582977268855653,
+        0.016603155784728645
+      ],
+      "independent_worlds": 32,
+      "mean": 0.01059306652679215
+    }
+  },
+  "floating_certificates": "analytic dual bounds with explicit float64 margins, not formal interval arithmetic",
+  "groups": [
+    {
+      "accepted_expected_decreases": 7,
+      "accepted_nonzero_updates": 96,
+      "accepted_realized_decreases": 9,
+      "decisions": 96,
+      "expected_gain_from_initial": {
+        "ci95": [
+          0.03271423154480655,
+          0.0468170002184475
+        ],
+        "independent_worlds": 32,
+        "mean": 0.039765615881627026
+      },
+      "mean_expected_ap": {
+        "ci95": [
+          0.6404164202919939,
+          0.6677562470658301
+        ],
+        "independent_worlds": 32,
+        "mean": 0.654086333678912
+      },
+      "mean_expected_increment": {
+        "ci95": [
+          0.03271423154480655,
+          0.0468170002184475
+        ],
+        "independent_worlds": 32,
+        "mean": 0.039765615881627026
+      },
+      "mean_realized_ap": {
+        "ci95": [
+          0.6389287726220585,
+          0.6678318890464057
+        ],
+        "independent_worlds": 32,
+        "mean": 0.6533803308342321
+      },
+      "n": 128,
+      "policy": "ordinary_latest",
+      "realized_gain_from_initial": {
+        "ci95": [
+          0.03220897468188255,
+          0.04642351104266876
+        ],
+        "independent_worlds": 32,
+        "mean": 0.039316242862275655
+      }
+    },
+    {
+      "accepted_expected_decreases": 0,
+      "accepted_nonzero_updates": 89,
+      "accepted_realized_decreases": 1,
+      "decisions": 96,
+      "expected_gain_from_initial": {
+        "ci95": [
+          0.0340165713174702,
+          0.04740563971336466
+        ],
+        "independent_worlds": 32,
+        "mean": 0.04071110551541743
+      },
+      "mean_expected_ap": {
+        "ci95": [
+          0.6411193423365341,
+          0.6689443042888706
+        ],
+        "independent_worlds": 32,
+        "mean": 0.6550318233127024
+      },
+      "mean_expected_increment": {
+        "ci95": [
+          0.0340165713174702,
+          0.04740563971336466
+        ],
+        "independent_worlds": 32,
+        "mean": 0.04071110551541743
+      },
+      "mean_realized_ap": {
+        "ci95": [
+          0.6396579844029014,
+          0.6692681197874731
+        ],
+        "independent_worlds": 32,
+        "mean": 0.6544630520951873
+      },
+      "n": 128,
+      "policy": "point_guard",
+      "realized_gain_from_initial": {
+        "ci95": [
+          0.03362703256631007,
+          0.04717089568015166
+        ],
+        "independent_worlds": 32,
+        "mean": 0.040398964123230865
+      }
+    },
+    {
+      "accepted_expected_decreases": 0,
+      "accepted_nonzero_updates": 63,
+      "accepted_realized_decreases": 0,
+      "decisions": 96,
+      "expected_gain_from_initial": {
+        "ci95": [
+          0.025103117126491964,
+          0.040290716921483685
+        ],
+        "independent_worlds": 32,
+        "mean": 0.032696917023987825
+      },
+      "mean_expected_ap": {
+        "ci95": [
+          0.6325644079853385,
+          0.6614708616572071
+        ],
+        "independent_worlds": 32,
+        "mean": 0.6470176348212728
+      },
+      "mean_expected_increment": {
+        "ci95": [
+          0.025103117126491964,
+          0.040290716921483685
+        ],
+        "independent_worlds": 32,
+        "mean": 0.032696917023987825
+      },
+      "mean_realized_ap": {
+        "ci95": [
+          0.6309458607216778,
+          0.6616421385765443
+        ],
+        "independent_worlds": 32,
+        "mean": 0.646293999649111
+      },
+      "n": 128,
+      "policy": "certified_guard",
+      "realized_gain_from_initial": {
+        "ci95": [
+          0.02472511259020036,
+          0.039734710764108803
+        ],
+        "independent_worlds": 32,
+        "mean": 0.03222991167715458
+      }
+    },
+    {
+      "accepted_expected_decreases": 9,
+      "accepted_nonzero_updates": 96,
+      "accepted_realized_decreases": 9,
+      "decisions": 96,
+      "expected_gain_from_initial": {
+        "ci95": [
+          0.08319099130075448,
+          0.11121237246198297
+        ],
+        "independent_worlds": 32,
+        "mean": 0.09720168188136873
+      },
+      "mean_expected_ap": {
+        "ci95": [
+          0.6980153186478428,
+          0.7250294807094646
+        ],
+        "independent_worlds": 32,
+        "mean": 0.7115223996786537
+      },
+      "mean_expected_increment": {
+        "ci95": [
+          0.04693483209950343,
+          0.06793729989997994
+        ],
+        "independent_worlds": 32,
+        "mean": 0.05743606599974169
+      },
+      "mean_realized_ap": {
+        "ci95": [
+          0.6950475218001864,
+          0.7247060023661869
+        ],
+        "independent_worlds": 32,
+        "mean": 0.7098767620831866
+      },
+      "n": 512,
+      "policy": "ordinary_latest",
+      "realized_gain_from_initial": {
+        "ci95": [
+          0.0812066524492615,
+          0.11041869577319903
+        ],
+        "independent_worlds": 32,
+        "mean": 0.09581267411123026
+      }
+    },
+    {
+      "accepted_expected_decreases": 0,
+      "accepted_nonzero_updates": 89,
+      "accepted_realized_decreases": 1,
+      "decisions": 96,
+      "expected_gain_from_initial": {
+        "ci95": [
+          0.08682591441385268,
+          0.11322790161173815
+        ],
+        "independent_worlds": 32,
+        "mean": 0.10002690801279542
+      },
+      "mean_expected_ap": {
+        "ci95": [
+          0.7014549581079298,
+          0.727240293512231
+        ],
+        "independent_worlds": 32,
+        "mean": 0.7143476258100804
+      },
+      "mean_expected_increment": {
+        "ci95": [
+          0.04943614565805727,
+          0.06919545933669868
+        ],
+        "independent_worlds": 32,
+        "mean": 0.05931580249737798
+      },
+      "mean_realized_ap": {
+        "ci95": [
+          0.6986240631695473,
+          0.7274736579029548
+        ],
+        "independent_worlds": 32,
+        "mean": 0.713048860536251
+      },
+      "n": 512,
+      "policy": "point_guard",
+      "realized_gain_from_initial": {
+        "ci95": [
+          0.08520665513711784,
+          0.1127628899914715
+        ],
+        "independent_worlds": 32,
+        "mean": 0.09898477256429467
+      }
+    },
+    {
+      "accepted_expected_decreases": 0,
+      "accepted_nonzero_updates": 84,
+      "accepted_realized_decreases": 1,
+      "decisions": 96,
+      "expected_gain_from_initial": {
+        "ci95": [
+          0.08584534375201684,
+          0.11225386359429905
+        ],
+        "independent_worlds": 32,
+        "mean": 0.09904960367315795
+      },
+      "mean_expected_ap": {
+        "ci95": [
+          0.700492144348867,
+          0.726248498592019
+        ],
+        "independent_worlds": 32,
+        "mean": 0.713370321470443
+      },
+      "mean_expected_increment": {
+        "ci95": [
+          0.05550810956781575,
+          0.0771972637305245
+        ],
+        "independent_worlds": 32,
+        "mean": 0.06635268664917013
+      },
+      "mean_realized_ap": {
+        "ci95": [
+          0.6977724124511069,
+          0.726551599839673
+        ],
+        "independent_worlds": 32,
+        "mean": 0.7121620061453899
+      },
+      "n": 512,
+      "policy": "certified_guard",
+      "realized_gain_from_initial": {
+        "ci95": [
+          0.08431866607285494,
+          0.1118771702740121
+        ],
+        "independent_worlds": 32,
+        "mean": 0.09809791817343352
+      }
+    },
+    {
+      "accepted_expected_decreases": 18,
+      "accepted_nonzero_updates": 96,
+      "accepted_realized_decreases": 22,
+      "decisions": 96,
+      "expected_gain_from_initial": {
+        "ci95": [
+          0.1130058320222672,
+          0.15286493069738227
+        ],
+        "independent_worlds": 32,
+        "mean": 0.13293538135982474
+      },
+      "mean_expected_ap": {
+        "ci95": [
+          0.7351073832496718,
+          0.7594048150645475
+        ],
+        "independent_worlds": 32,
+        "mean": 0.7472560991571097
+      },
+      "mean_expected_increment": {
+        "ci95": [
+          0.02284120219653556,
+          0.04862619676037645
+        ],
+        "independent_worlds": 32,
+        "mean": 0.035733699478456005
+      },
+      "mean_realized_ap": {
+        "ci95": [
+          0.7314341482538711,
+          0.7605115607848216
+        ],
+        "independent_worlds": 32,
+        "mean": 0.7459728545193464
+      },
+      "n": 2048,
+      "policy": "ordinary_latest",
+      "realized_gain_from_initial": {
+        "ci95": [
+          0.11085833688792468,
+          0.15295919620685522
+        ],
+        "independent_worlds": 32,
+        "mean": 0.13190876654738995
+      }
+    },
+    {
+      "accepted_expected_decreases": 0,
+      "accepted_nonzero_updates": 78,
+      "accepted_realized_decreases": 3,
+      "decisions": 96,
+      "expected_gain_from_initial": {
+        "ci95": [
+          0.12693113516798843,
+          0.16012576060524536
+        ],
+        "independent_worlds": 32,
+        "mean": 0.1435284478866169
+      },
+      "mean_expected_ap": {
+        "ci95": [
+          0.7475834915648999,
+          0.768114839802904
+        ],
+        "independent_worlds": 32,
+        "mean": 0.7578491656839019
+      },
+      "mean_expected_increment": {
+        "ci95": [
+          0.033607827680415835,
+          0.053395252067227096
+        ],
+        "independent_worlds": 32,
+        "mean": 0.043501539873821465
+      },
+      "mean_realized_ap": {
+        "ci95": [
+          0.743198431767405,
+          0.7703893014756615
+        ],
+        "independent_worlds": 32,
+        "mean": 0.7567938666215333
+      },
+      "n": 2048,
+      "policy": "point_guard",
+      "realized_gain_from_initial": {
+        "ci95": [
+          0.1247797590049426,
+          0.16067979829421092
+        ],
+        "independent_worlds": 32,
+        "mean": 0.14272977864957676
+      }
+    },
+    {
+      "accepted_expected_decreases": 0,
+      "accepted_nonzero_updates": 71,
+      "accepted_realized_decreases": 0,
+      "decisions": 96,
+      "expected_gain_from_initial": {
+        "ci95": [
+          0.12578945553791718,
+          0.15931157241964375
+        ],
+        "independent_worlds": 32,
+        "mean": 0.14255051397878046
+      },
+      "mean_expected_ap": {
+        "ci95": [
+          0.7464076088944017,
+          0.7673348546577289
+        ],
+        "independent_worlds": 32,
+        "mean": 0.7568712317760653
+      },
+      "mean_expected_increment": {
+        "ci95": [
+          0.03361460824834104,
+          0.05338721236290395
+        ],
+        "independent_worlds": 32,
+        "mean": 0.043500910305622496
+      },
+      "mean_realized_ap": {
+        "ci95": [
+          0.7425524283892728,
+          0.769993629824544
+        ],
+        "independent_worlds": 32,
+        "mean": 0.7562730291069084
+      },
+      "n": 2048,
+      "policy": "certified_guard",
+      "realized_gain_from_initial": {
+        "ci95": [
+          0.12421663126330292,
+          0.16020125100660104
+        ],
+        "independent_worlds": 32,
+        "mean": 0.14220894113495197
+      }
+    }
+  ],
+  "independent_worlds": 32,
+  "initial_expected_ap": {
+    "ci95": [
+      0.5992705823739468,
+      0.629370853220623
+    ],
+    "independent_worlds": 32,
+    "mean": 0.6143207177972849
+  },
+  "interval_curve": [
+    {
+      "fallback_endpoints": 0,
+      "maximum_primal_dual_gap": 3.11706587297067e-06,
+      "mean_information_radius": {
+        "ci95": [
+          0.18014423506850327,
+          0.19082928811510838
+        ],
+        "independent_worlds": 32,
+        "mean": 0.18548676159180583
+      },
+      "mean_width": {
+        "ci95": [
+          0.44459037072250623,
+          0.46288879571673686
+        ],
+        "independent_worlds": 32,
+        "mean": 0.45373958321962155
+      },
+      "n": 128,
+      "projection_seconds": 3.345740889000126,
+      "solver_failure_endpoints": 7
+    },
+    {
+      "fallback_endpoints": 0,
+      "maximum_primal_dual_gap": 3.727167327216563e-06,
+      "mean_information_radius": {
+        "ci95": [
+          0.06507235652501084,
+          0.07000205025024578
+        ],
+        "independent_worlds": 32,
+        "mean": 0.06753720338762831
+      },
+      "mean_width": {
+        "ci95": [
+          0.24401611997561684,
+          0.2566652960010141
+        ],
+        "independent_worlds": 32,
+        "mean": 0.2503407079883155
+      },
+      "n": 512,
+      "projection_seconds": 6.632466539000006,
+      "solver_failure_endpoints": 6
+    },
+    {
+      "fallback_endpoints": 0,
+      "maximum_primal_dual_gap": 1.07043599850698e-05,
+      "mean_information_radius": {
+        "ci95": [
+          0.02042461735556536,
+          0.02182296517687747
+        ],
+        "independent_worlds": 32,
+        "mean": 0.021123791266221416
+      },
+      "mean_width": {
+        "ci95": [
+          0.1313096164677788,
+          0.13886516170945165
+        ],
+        "independent_worlds": 32,
+        "mean": 0.13508738908861523
+      },
+      "n": 2048,
+      "projection_seconds": 16.11741222499927,
+      "solver_failure_endpoints": 9
+    }
+  ],
+  "maximum_lower_decrease": 0.0,
+  "maximum_radius_increase": 0.0,
+  "maximum_upper_increase": 0.0,
+  "mean_true_aleatoric_entropy": 0.3600328415421907,
+  "original_full_network_training": false,
+  "positive_expected_candidates_without_positive_certificate": 157,
+  "real_nus_training": false,
+  "scope": "synthetic_known_model_only",
+  "simultaneous_parameter_coverage": {
+    "clopper_pearson_two_sided_95": [
+      0.8911188393206471,
+      1.0
+    ],
+    "covered": 32,
+    "estimate": 1.0,
+    "total": 32
+  },
+  "simultaneous_query_probability_coverage": {
+    "covered": 32,
+    "total": 32
+  },
+  "status": "passed",
+  "student_initializations_per_world": 3,
+  "total_adam_updates": 14784,
+  "trained_student_paths": 96,
+  "true_positive_expected_candidates": 749
+}

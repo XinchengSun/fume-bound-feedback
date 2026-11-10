@@ -1,0 +1,22 @@
+{
+  "completed_worlds": 32,
+  "config_frozen_before_generation": true,
+  "config_sha256": "9ee1646192cfd0d289c0186f1ceebb20f206042637bfad1a91257d7caa7b9b17",
+  "controlled_student_training": true,
+  "elapsed_seconds": 43.62862495500008,
+  "finished_at_utc": "2026-11-10T12:50:17.810767+00:00",
+  "numpy": "2.3.5",
+  "python": "3.12.14",
+  "real_training": false,
+  "scipy": "1.17.0",
+  "source_sha256": {
+    "__init__.py": "a090071265ba92cf9a6f55b3b0ce50b39e0ab7fcf6c2882e5e5177d782249f17",
+    "confidence.py": "1ad0c4b9f2fa014a10ce71e58109c663ad291bd2b1c4273b1a7013fb0f771126",
+    "ranking.py": "f20454c346b2ff209d92590a2e506b3aaef9b98437b62aabfe7315b7bf0e95ed",
+    "run.py": "f504aa66716689d09dfc83d0d386cbc156eff6c376cbcc169bc231ec8fbb26d5",
+    "student.py": "5fa17d337a5d204bf84691607a582dae8688afe6601a407b9cd9b25e33e379dd",
+    "uncertainty.py": "fa573bc78f9d5f2afd5e77be3b7a6390b1d2067684287736dc70374249e60d15"
+  },
+  "started_at_utc": "2026-11-10T12:49:34.181912+00:00",
+  "status": "passed"
+}
